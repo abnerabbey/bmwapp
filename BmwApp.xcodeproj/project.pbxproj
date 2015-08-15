@@ -14,6 +14,8 @@
 		0725A2391B7FCAA70002B7A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2381B7FCAA70002B7A0 /* Images.xcassets */; };
 		0725A23C1B7FCAA70002B7A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0725A23A1B7FCAA70002B7A0 /* LaunchScreen.xib */; };
 		0725A2481B7FCAA70002B7A0 /* BmwAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2471B7FCAA70002B7A0 /* BmwAppTests.m */; };
+		0725A2531B7FEA320002B7A0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2521B7FEA320002B7A0 /* MainViewController.m */; };
+		0725A2551B7FEB760002B7A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0725A2541B7FEB760002B7A0 /* MapKit.framework */; };
 		F36EB6B6287DB1A53D3D9A86 /* libPods-BmwApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,9 @@
 		0725A2411B7FCAA70002B7A0 /* BmwAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BmwAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0725A2461B7FCAA70002B7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0725A2471B7FCAA70002B7A0 /* BmwAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BmwAppTests.m; sourceTree = "<group>"; };
+		0725A2511B7FEA320002B7A0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		0725A2521B7FEA320002B7A0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		0725A2541B7FEB760002B7A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		49FA5A96BFDF7BC3EAC57965 /* Pods-BmwApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.release.xcconfig"; sourceTree = "<group>"; };
 		6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BmwApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CD28466B14303F75D16D6E /* Pods-BmwApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0725A2551B7FEB760002B7A0 /* MapKit.framework in Frameworks */,
 				F36EB6B6287DB1A53D3D9A86 /* libPods-BmwApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +99,8 @@
 				0725A2321B7FCAA70002B7A0 /* ViewController.h */,
 				0725A2331B7FCAA70002B7A0 /* ViewController.m */,
 				0725A2351B7FCAA70002B7A0 /* Main.storyboard */,
+				0725A2511B7FEA320002B7A0 /* MainViewController.h */,
+				0725A2521B7FEA320002B7A0 /* MainViewController.m */,
 				0725A2381B7FCAA70002B7A0 /* Images.xcassets */,
 				0725A23A1B7FCAA70002B7A0 /* LaunchScreen.xib */,
 				0725A22B1B7FCAA70002B7A0 /* Supporting Files */,
@@ -129,6 +137,7 @@
 		14E6BCB63C9B851F49E5C1BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0725A2541B7FEB760002B7A0 /* MapKit.framework */,
 				6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */,
 			);
 			name = Frameworks;
@@ -281,6 +290,7 @@
 				0725A2341B7FCAA70002B7A0 /* ViewController.m in Sources */,
 				0725A2311B7FCAA70002B7A0 /* AppDelegate.m in Sources */,
 				0725A22E1B7FCAA70002B7A0 /* main.m in Sources */,
+				0725A2531B7FEA320002B7A0 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
