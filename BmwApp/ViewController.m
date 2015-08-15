@@ -14,14 +14,81 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    PFUser *user = [PFUser currentUser];
+    if(user){
+        //Omite login
+    }
+    else
+    {
+        
+    }
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)logIn:(UIButton *)sender
+{
+    NSArray *permisssions = @[@"public_profile", @"user_birthday", @"email", @"user_friends"];
+    [PFFacebookUtils logInWithPermissions:permisssions block:^(PFUser *user, NSError *error){
+        
+    }];
 }
-
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
