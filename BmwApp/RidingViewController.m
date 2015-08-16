@@ -9,6 +9,7 @@
 #import "RidingViewController.h"
 #import <CoreMotion/CoreMotion.h>
 #import "BmwApp-Swift.h"
+#import <Parse/Parse.h>
 
 int counter = 30;// segun yo este es el contador :/
 
@@ -27,10 +28,14 @@ int counter = 30;// segun yo este es el contador :/
     NSTimer *timer;
     NSTimer *timerAlarm;
     NSUserDefaults *sharedData;
+    int count;
+    BOOL m;
     
 }
 
 - (void)viewDidLoad {
+    count = 30;
+    m = false;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     timer = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(methodB) userInfo:nil repeats:YES];
@@ -58,7 +63,11 @@ int counter = 30;// segun yo este es el contador :/
                  if ([colDetector colHasOcurred:biggestVec value:10]){
                      //                     self.statusL.text = @"Ha Ocurrido un accidente";
                      [self ventanaEmergente];
-                     timerAlarm = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(triggerAlarm) userInfo:nil repeats:YES];
+//
+                     if (m == false) {
+                         m = true;
+                     }
+                     
                      //Ocurrio un Accidente
 //                     self.butLabel.text = @"Alert!";
                      [sharedData setObject: @"Danger!" forKey:@"status"];
@@ -82,6 +91,7 @@ int counter = 30;// segun yo este es el contador :/
 }
 
 - (void)restartValue{
+    count = 30;
     biggestVec = [[Vector alloc] initWithF:startingValues];
     
     //Reinicia el algoritmo del acelerometro
@@ -106,6 +116,9 @@ int counter = 30;// segun yo este es el contador :/
     }
     [sharedData setObject: @"Ok" forKey:@"status"];
     [sharedData setValue:@"N" forKey:@"L"];
+    if (m == true) {
+        timerAlarm = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(triggerAlarm) userInfo:nil repeats:YES];
+    }
 }
 
 - (void) ventanaEmergente {
@@ -117,11 +130,25 @@ int counter = 30;// segun yo este es el contador :/
 }
 
 - (void) triggerAlarm{
-    counter = counter - 1;
-    self.counterLabel.text = [NSString stringWithFormat:@"%.20d", counter];
-    if (counter <= 0) {
+    count = count - 1;
+    NSLog(@"%d", count);
+    
+    if (count <= 0) {
+        count = 0;
+        [timerAlarm invalidate];
+        m = false;
+        PFUser *user = [PFUser currentUser];
+        [PFCloud callFunctionInBackground:@"telefonos"
+                           withParameters:@{@"objectId": user.objectId}
+                                    block:^(NSString *success, NSError *error) {
+                                        if (!error) {
+                                            
+                                        }
+                                    }];
+        count = 30;
         //triggerAlarm
     }
+    self.counterLabel.text = [NSString stringWithFormat:@"%d", count];
 }
 
 - (void) desapareceVentana {

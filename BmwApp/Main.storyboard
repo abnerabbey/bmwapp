@@ -112,9 +112,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOw-6k-co1">
-                                        <rect key="frame" x="34" y="23" width="233" height="254"/>
+                                        <rect key="frame" x="17" y="5" width="266" height="289"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="233" id="eKb-pq-QOR"/>
+                                            <constraint firstAttribute="width" constant="266" id="eKb-pq-QOR"/>
                                             <constraint firstAttribute="width" secondItem="vOw-6k-co1" secondAttribute="height" multiplier="233:254" id="pzI-B7-4gA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="120"/>
