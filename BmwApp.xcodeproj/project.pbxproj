@@ -20,6 +20,10 @@
 		0725A25E1B8039C20002B7A0 /* wallpaper_1600x1200_planet_power_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2591B8039C20002B7A0 /* wallpaper_1600x1200_planet_power_02.jpg */; };
 		0725A25F1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A25A1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg */; };
 		0725A2621B8046BE0002B7A0 /* LocationSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2611B8046BE0002B7A0 /* LocationSingleton.m */; };
+		0725A2671B8060810002B7A0 /* RecentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2661B8060810002B7A0 /* RecentsViewController.m */; };
+		0725A26A1B8070C70002B7A0 /* Clock Filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2681B8070C70002B7A0 /* Clock Filled@2x.png */; };
+		0725A26B1B8070C70002B7A0 /* Motorcycle Filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2691B8070C70002B7A0 /* Motorcycle Filled@2x.png */; };
+		0725A26E1B80AFE90002B7A0 /* DetailHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A26D1B80AFE90002B7A0 /* DetailHistoryViewController.m */; };
 		07CA2C411B80E39100C8625B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA2C401B80E39100C8625B /* ProfileViewController.m */; };
 		07CA2C431B80F49A00C8625B /* joseluis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07CA2C421B80F49A00C8625B /* joseluis.jpg */; };
 		07CA2C481B80F76B00C8625B /* iPhone6Resolution.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CA2C441B80F76B00C8625B /* iPhone6Resolution.png */; };
@@ -121,6 +125,12 @@
 		0725A25A1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallpaper_gs_legend_1440x900_03.jpg; sourceTree = "<group>"; };
 		0725A2601B8046BE0002B7A0 /* LocationSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationSingleton.h; path = ../LocationSingleton.h; sourceTree = "<group>"; };
 		0725A2611B8046BE0002B7A0 /* LocationSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationSingleton.m; path = ../LocationSingleton.m; sourceTree = "<group>"; };
+		0725A2651B8060810002B7A0 /* RecentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentsViewController.h; sourceTree = "<group>"; };
+		0725A2661B8060810002B7A0 /* RecentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentsViewController.m; sourceTree = "<group>"; };
+		0725A2681B8070C70002B7A0 /* Clock Filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clock Filled@2x.png"; sourceTree = "<group>"; };
+		0725A2691B8070C70002B7A0 /* Motorcycle Filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Motorcycle Filled@2x.png"; sourceTree = "<group>"; };
+		0725A26C1B80AFE90002B7A0 /* DetailHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailHistoryViewController.h; sourceTree = "<group>"; };
+		0725A26D1B80AFE90002B7A0 /* DetailHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailHistoryViewController.m; sourceTree = "<group>"; };
 		07CA2C3F1B80E39100C8625B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
 		07CA2C401B80E39100C8625B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
 		07CA2C421B80F49A00C8625B /* joseluis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = joseluis.jpg; sourceTree = "<group>"; };
@@ -276,6 +286,10 @@
 				0725A2301B7FCAA70002B7A0 /* AppDelegate.m */,
 				0725A2321B7FCAA70002B7A0 /* ViewController.h */,
 				0725A2331B7FCAA70002B7A0 /* ViewController.m */,
+				0725A26C1B80AFE90002B7A0 /* DetailHistoryViewController.h */,
+				0725A26D1B80AFE90002B7A0 /* DetailHistoryViewController.m */,
+				0725A2651B8060810002B7A0 /* RecentsViewController.h */,
+				0725A2661B8060810002B7A0 /* RecentsViewController.m */,
 				A907D8A31B800F4000DF461D /* ContactsViewController.h */,
 				E01EFCF21B8052AA00000ADF /* ColisionDetector.swift */,
 				E01EFCF01B8052A000000ADF /* Vector.swift */,
@@ -477,6 +491,7 @@
 		0725A2201B7FCAA70002B7A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Abner Castro Aguilar";
 				TargetAttributes = {
@@ -528,6 +543,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0725A26A1B8070C70002B7A0 /* Clock Filled@2x.png in Resources */,
+				0725A26B1B8070C70002B7A0 /* Motorcycle Filled@2x.png in Resources */,
 				0725A23C1B7FCAA70002B7A0 /* LaunchScreen.xib in Resources */,
 				0725A2391B7FCAA70002B7A0 /* Images.xcassets in Resources */,
 				07CA2C4B1B80F76B00C8625B /* iPhone6Resolution_4.png in Resources */,
@@ -580,6 +597,7 @@
 				0725A2311B7FCAA70002B7A0 /* AppDelegate.m in Sources */,
 				A01C7BEF1B809C02008CEB90 /* ABContact.m in Sources */,
 				A01C7BF11B809C02008CEB90 /* ABGroup.m in Sources */,
+				0725A26E1B80AFE90002B7A0 /* DetailHistoryViewController.m in Sources */,
 				0725A22E1B7FCAA70002B7A0 /* main.m in Sources */,
 				0725A2671B8060810002B7A0 /* RecentsViewController.m in Sources */,
 				0725A2621B8046BE0002B7A0 /* LocationSingleton.m in Sources */,
