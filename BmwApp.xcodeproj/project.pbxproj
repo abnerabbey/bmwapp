@@ -62,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01C7BE41B80996C008CEB90 /* AddressBookUI.framework in Frameworks */,
+				A01C7BE21B809966008CEB90 /* AddressBook.framework in Frameworks */,
 				0725A2551B7FEB760002B7A0 /* MapKit.framework in Frameworks */,
 				F36EB6B6287DB1A53D3D9A86 /* libPods-BmwApp.a in Frameworks */,
 			);
@@ -109,6 +111,8 @@
 				A907D8A41B800F4000DF461D /* ContactsViewController.m */,
 				0725A2511B7FEA320002B7A0 /* MainViewController.h */,
 				0725A2521B7FEA320002B7A0 /* MainViewController.m */,
+				A01C7BDE1B809535008CEB90 /* AddUserInfoViewController.h */,
+				A01C7BDF1B809535008CEB90 /* AddUserInfoViewController.m */,
 				0725A2381B7FCAA70002B7A0 /* Images.xcassets */,
 				0725A23A1B7FCAA70002B7A0 /* LaunchScreen.xib */,
 				A907D8A01B7FFC0500DF461D /* RidingViewController.h */,
@@ -147,10 +151,28 @@
 		14E6BCB63C9B851F49E5C1BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A01C7BE31B80996C008CEB90 /* AddressBookUI.framework */,
+				A01C7BE11B809966008CEB90 /* AddressBook.framework */,
 				0725A2541B7FEB760002B7A0 /* MapKit.framework */,
 				6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A01C7BE51B809C02008CEB90 /* Address Book Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				A01C7BE61B809C02008CEB90 /* ABContact.h */,
+				A01C7BE71B809C02008CEB90 /* ABContact.m */,
+				A01C7BE81B809C02008CEB90 /* ABContactsHelper.h */,
+				A01C7BE91B809C02008CEB90 /* ABContactsHelper.m */,
+				A01C7BEA1B809C02008CEB90 /* ABGroup.h */,
+				A01C7BEB1B809C02008CEB90 /* ABGroup.m */,
+				A01C7BEC1B809C02008CEB90 /* ABStandin.h */,
+				A01C7BED1B809C02008CEB90 /* ABStandin.m */,
+				A01C7BEE1B809C02008CEB90 /* ABWrappers.h */,
+			);
+			path = "Address Book Wrappers";
 			sourceTree = "<group>";
 		};
 		CA08F6A33EE325B367BEF06E /* Pods */ = {
@@ -300,9 +322,12 @@
 				0725A2341B7FCAA70002B7A0 /* ViewController.m in Sources */,
 				A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */,
 				0725A2311B7FCAA70002B7A0 /* AppDelegate.m in Sources */,
+				A01C7BEF1B809C02008CEB90 /* ABContact.m in Sources */,
+				A01C7BF11B809C02008CEB90 /* ABGroup.m in Sources */,
 				0725A22E1B7FCAA70002B7A0 /* main.m in Sources */,
 				A907D8A21B7FFC0500DF461D /* RidingViewController.m in Sources */,
 				0725A2531B7FEA320002B7A0 /* MainViewController.m in Sources */,
+				A01C7BF01B809C02008CEB90 /* ABContactsHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
