@@ -16,6 +16,13 @@
 		0725A2481B7FCAA70002B7A0 /* BmwAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2471B7FCAA70002B7A0 /* BmwAppTests.m */; };
 		0725A2531B7FEA320002B7A0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2521B7FEA320002B7A0 /* MainViewController.m */; };
 		0725A2551B7FEB760002B7A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0725A2541B7FEB760002B7A0 /* MapKit.framework */; };
+		A01C7BE01B809535008CEB90 /* AddUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01C7BDF1B809535008CEB90 /* AddUserInfoViewController.m */; };
+		A01C7BE21B809966008CEB90 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01C7BE11B809966008CEB90 /* AddressBook.framework */; };
+		A01C7BE41B80996C008CEB90 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01C7BE31B80996C008CEB90 /* AddressBookUI.framework */; };
+		A01C7BEF1B809C02008CEB90 /* ABContact.m in Sources */ = {isa = PBXBuildFile; fileRef = A01C7BE71B809C02008CEB90 /* ABContact.m */; };
+		A01C7BF01B809C02008CEB90 /* ABContactsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A01C7BE91B809C02008CEB90 /* ABContactsHelper.m */; };
+		A01C7BF11B809C02008CEB90 /* ABGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A01C7BEB1B809C02008CEB90 /* ABGroup.m */; };
+		A01C7BF21B809C02008CEB90 /* ABStandin.m in Sources */ = {isa = PBXBuildFile; fileRef = A01C7BED1B809C02008CEB90 /* ABStandin.m */; };
 		F36EB6B6287DB1A53D3D9A86 /* libPods-BmwApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +55,19 @@
 		0725A2541B7FEB760002B7A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		49FA5A96BFDF7BC3EAC57965 /* Pods-BmwApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.release.xcconfig"; sourceTree = "<group>"; };
 		6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BmwApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01C7BDE1B809535008CEB90 /* AddUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserInfoViewController.h; sourceTree = "<group>"; };
+		A01C7BDF1B809535008CEB90 /* AddUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserInfoViewController.m; sourceTree = "<group>"; };
+		A01C7BE11B809966008CEB90 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		A01C7BE31B80996C008CEB90 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		A01C7BE61B809C02008CEB90 /* ABContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABContact.h; sourceTree = "<group>"; };
+		A01C7BE71B809C02008CEB90 /* ABContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABContact.m; sourceTree = "<group>"; };
+		A01C7BE81B809C02008CEB90 /* ABContactsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABContactsHelper.h; sourceTree = "<group>"; };
+		A01C7BE91B809C02008CEB90 /* ABContactsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABContactsHelper.m; sourceTree = "<group>"; };
+		A01C7BEA1B809C02008CEB90 /* ABGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABGroup.h; sourceTree = "<group>"; };
+		A01C7BEB1B809C02008CEB90 /* ABGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABGroup.m; sourceTree = "<group>"; };
+		A01C7BEC1B809C02008CEB90 /* ABStandin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABStandin.h; sourceTree = "<group>"; };
+		A01C7BED1B809C02008CEB90 /* ABStandin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABStandin.m; sourceTree = "<group>"; };
+		A01C7BEE1B809C02008CEB90 /* ABWrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABWrappers.h; sourceTree = "<group>"; };
 		E2CD28466B14303F75D16D6E /* Pods-BmwApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01C7BE41B80996C008CEB90 /* AddressBookUI.framework in Frameworks */,
+				A01C7BE21B809966008CEB90 /* AddressBook.framework in Frameworks */,
 				0725A2551B7FEB760002B7A0 /* MapKit.framework in Frameworks */,
 				F36EB6B6287DB1A53D3D9A86 /* libPods-BmwApp.a in Frameworks */,
 			);
@@ -101,8 +123,11 @@
 				0725A2351B7FCAA70002B7A0 /* Main.storyboard */,
 				0725A2511B7FEA320002B7A0 /* MainViewController.h */,
 				0725A2521B7FEA320002B7A0 /* MainViewController.m */,
+				A01C7BDE1B809535008CEB90 /* AddUserInfoViewController.h */,
+				A01C7BDF1B809535008CEB90 /* AddUserInfoViewController.m */,
 				0725A2381B7FCAA70002B7A0 /* Images.xcassets */,
 				0725A23A1B7FCAA70002B7A0 /* LaunchScreen.xib */,
+				A01C7BE51B809C02008CEB90 /* Address Book Wrappers */,
 				0725A22B1B7FCAA70002B7A0 /* Supporting Files */,
 			);
 			path = BmwApp;
@@ -137,10 +162,28 @@
 		14E6BCB63C9B851F49E5C1BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A01C7BE31B80996C008CEB90 /* AddressBookUI.framework */,
+				A01C7BE11B809966008CEB90 /* AddressBook.framework */,
 				0725A2541B7FEB760002B7A0 /* MapKit.framework */,
 				6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A01C7BE51B809C02008CEB90 /* Address Book Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				A01C7BE61B809C02008CEB90 /* ABContact.h */,
+				A01C7BE71B809C02008CEB90 /* ABContact.m */,
+				A01C7BE81B809C02008CEB90 /* ABContactsHelper.h */,
+				A01C7BE91B809C02008CEB90 /* ABContactsHelper.m */,
+				A01C7BEA1B809C02008CEB90 /* ABGroup.h */,
+				A01C7BEB1B809C02008CEB90 /* ABGroup.m */,
+				A01C7BEC1B809C02008CEB90 /* ABStandin.h */,
+				A01C7BED1B809C02008CEB90 /* ABStandin.m */,
+				A01C7BEE1B809C02008CEB90 /* ABWrappers.h */,
+			);
+			path = "Address Book Wrappers";
 			sourceTree = "<group>";
 		};
 		CA08F6A33EE325B367BEF06E /* Pods */ = {
@@ -288,9 +331,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0725A2341B7FCAA70002B7A0 /* ViewController.m in Sources */,
+				A01C7BF21B809C02008CEB90 /* ABStandin.m in Sources */,
+				A01C7BE01B809535008CEB90 /* AddUserInfoViewController.m in Sources */,
 				0725A2311B7FCAA70002B7A0 /* AppDelegate.m in Sources */,
+				A01C7BEF1B809C02008CEB90 /* ABContact.m in Sources */,
+				A01C7BF11B809C02008CEB90 /* ABGroup.m in Sources */,
 				0725A22E1B7FCAA70002B7A0 /* main.m in Sources */,
 				0725A2531B7FEA320002B7A0 /* MainViewController.m in Sources */,
+				A01C7BF01B809C02008CEB90 /* ABContactsHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
