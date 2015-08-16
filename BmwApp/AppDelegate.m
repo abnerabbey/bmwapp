@@ -20,6 +20,9 @@
     
     [Parse setApplicationId:@"gEDkRgp5JanBICu7PWXZVGBUS07I9bVvcWvfDIG1" clientKey:@"wQFxF9FHYYelJZQzE1Iuuutf9bKrU7R3Qu0zJfii"];
     [PFFacebookUtils initializeFacebook];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.149 green:0.537 blue:0.973 alpha:1.0]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     return YES;
 }
 

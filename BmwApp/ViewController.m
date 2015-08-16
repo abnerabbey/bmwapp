@@ -31,7 +31,9 @@
 {
     NSArray *permisssions = @[@"public_profile", @"user_birthday", @"email", @"user_friends"];
     [PFFacebookUtils logInWithPermissions:permisssions block:^(PFUser *user, NSError *error){
-        
+        if(!error){
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
     }];
 }
 @end

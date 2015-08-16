@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import <Parse/Parse.h>
+#import "LocationSingleton.h"
 
 @interface MainViewController ()
 
@@ -15,71 +16,119 @@
 
 @implementation MainViewController
 {
-    
-    
-    NSMutableArray *arrayRoute;
-    NSMutableArray *arrayDate;
-    NSMutableArray *arrayRank;
+    BOOL firstTime;
+    LocationSingleton *locationManager;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIBarButtonItem *rideButton = [[UIBarButtonItem alloc] initWithTitle:@"Ride" style:UIBarButtonItemStyleDone target:self action:@selector(ride)];
+    locationManager = [LocationSingleton sharedInstace];
+    [locationManager.locationManager requestWhenInUseAuthorization];
+    
+    firstTime = YES;
+    
+    UIBarButtonItem *rideButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStyleDone target:self action:@selector(settings)];
+    rideButton.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rideButton;
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self getParse];
-
+    self.rideButton.layer.cornerRadius = 6.0;
 }
 
-#pragma mark TableView Delegate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (void)viewDidAppear:(BOOL)animated
 {
-    return arrayRoute.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if(!cell)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    
-    UILabel *routeLabel = (UILabel *)[cell viewWithTag:1];
-    routeLabel.text = [arrayRoute objectAtIndex:indexPath.row];
-    
-    UILabel *dateLabel = (UILabel *)[cell viewWithTag:2];
-    dateLabel.text = [arrayDate objectAtIndex:indexPath.row];
-    
-    UILabel *rankLabel = (UILabel *)[cell viewWithTag:3];
-    rankLabel.text = [arrayRank objectAtIndex:indexPath.row];
-    
-    return cell;
-}
-
-- (void)getParse
-{
-    PFQuery *query = [PFQuery queryWithClassName:@"viajes"];
-    [query whereKey:@"user" equalTo:[NSString stringWithFormat:@"%@", [PFUser currentUser].email]];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-        for (PFObject *object in objects) {
-            [arrayRoute addObject:[object objectForKey:@"ruta"]];
-            [arrayDate addObject:[object objectForKey:@"fecha"]];
-            [arrayRank addObject:[object objectForKey:@"rank"]];
-            [self.tableView reloadData];
+    if(firstTime){
+        PFUser *currentUser = [PFUser currentUser];
+        if(!currentUser){
+            ViewController *loginView = [[self storyboard] instantiateViewControllerWithIdentifier:@"login"];
+            UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:loginView];
+            [self presentViewController:nv animated:YES completion:nil];
         }
-    }];
+        firstTime = NO;
+    }
 }
 
-- (void)ride
+- (void)settings
 {
+    
+}
+
+
+
+- (IBAction)takeRide:(UIButton *)sender
+{
+    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"About to ride" message:@"How would you like to ride?" preferredStyle:UIAlertControllerStyleActionSheet];
     [alert addAction:[UIAlertAction actionWithTitle:@"Ride Solo" style:UIAlertActionStyleDefault handler:nil]];
     [alert addAction:[UIAlertAction actionWithTitle:@"Ride Along" style:UIAlertActionStyleDefault handler:nil]];
     [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
     [self presentViewController:alert animated:YES completion:nil];
 }
-
-
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

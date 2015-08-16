@@ -16,6 +16,13 @@
 		0725A2481B7FCAA70002B7A0 /* BmwAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2471B7FCAA70002B7A0 /* BmwAppTests.m */; };
 		0725A2531B7FEA320002B7A0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2521B7FEA320002B7A0 /* MainViewController.m */; };
 		0725A2551B7FEB760002B7A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0725A2541B7FEB760002B7A0 /* MapKit.framework */; };
+		0725A25B1B8039C20002B7A0 /* BMW motorrad maze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2561B8039C20002B7A0 /* BMW motorrad maze.jpg */; };
+		0725A25C1B8039C20002B7A0 /* BMW-K1600-GT-Wallpaper-04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2571B8039C20002B7A0 /* BMW-K1600-GT-Wallpaper-04.jpg */; };
+		0725A25D1B8039C20002B7A0 /* BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2581B8039C20002B7A0 /* BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg */; };
+		0725A25E1B8039C20002B7A0 /* wallpaper_1600x1200_planet_power_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2591B8039C20002B7A0 /* wallpaper_1600x1200_planet_power_02.jpg */; };
+		0725A25F1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A25A1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg */; };
+		0725A2621B8046BE0002B7A0 /* LocationSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2611B8046BE0002B7A0 /* LocationSingleton.m */; };
+		0725A2641B8046DE0002B7A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0725A2631B8046DE0002B7A0 /* CoreLocation.framework */; };
 		A907D8A21B7FFC0500DF461D /* RidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A11B7FFC0500DF461D /* RidingViewController.m */; };
 		A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A41B800F4000DF461D /* ContactsViewController.m */; };
 		F36EB6B6287DB1A53D3D9A86 /* libPods-BmwApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */; };
@@ -48,6 +55,14 @@
 		0725A2511B7FEA320002B7A0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		0725A2521B7FEA320002B7A0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		0725A2541B7FEB760002B7A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0725A2561B8039C20002B7A0 /* BMW motorrad maze.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "BMW motorrad maze.jpg"; sourceTree = "<group>"; };
+		0725A2571B8039C20002B7A0 /* BMW-K1600-GT-Wallpaper-04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "BMW-K1600-GT-Wallpaper-04.jpg"; sourceTree = "<group>"; };
+		0725A2581B8039C20002B7A0 /* BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg"; sourceTree = "<group>"; };
+		0725A2591B8039C20002B7A0 /* wallpaper_1600x1200_planet_power_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallpaper_1600x1200_planet_power_02.jpg; sourceTree = "<group>"; };
+		0725A25A1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallpaper_gs_legend_1440x900_03.jpg; sourceTree = "<group>"; };
+		0725A2601B8046BE0002B7A0 /* LocationSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationSingleton.h; path = ../LocationSingleton.h; sourceTree = "<group>"; };
+		0725A2611B8046BE0002B7A0 /* LocationSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationSingleton.m; path = ../LocationSingleton.m; sourceTree = "<group>"; };
+		0725A2631B8046DE0002B7A0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		49FA5A96BFDF7BC3EAC57965 /* Pods-BmwApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.release.xcconfig"; sourceTree = "<group>"; };
 		6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BmwApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A907D8A01B7FFC0500DF461D /* RidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RidingViewController.h; sourceTree = "<group>"; };
@@ -62,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0725A2641B8046DE0002B7A0 /* CoreLocation.framework in Frameworks */,
 				0725A2551B7FEB760002B7A0 /* MapKit.framework in Frameworks */,
 				F36EB6B6287DB1A53D3D9A86 /* libPods-BmwApp.a in Frameworks */,
 			);
@@ -100,6 +116,13 @@
 		0725A22A1B7FCAA70002B7A0 /* BmwApp */ = {
 			isa = PBXGroup;
 			children = (
+				0725A2601B8046BE0002B7A0 /* LocationSingleton.h */,
+				0725A2611B8046BE0002B7A0 /* LocationSingleton.m */,
+				0725A2561B8039C20002B7A0 /* BMW motorrad maze.jpg */,
+				0725A2571B8039C20002B7A0 /* BMW-K1600-GT-Wallpaper-04.jpg */,
+				0725A2581B8039C20002B7A0 /* BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg */,
+				0725A2591B8039C20002B7A0 /* wallpaper_1600x1200_planet_power_02.jpg */,
+				0725A25A1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg */,
 				0725A22F1B7FCAA70002B7A0 /* AppDelegate.h */,
 				0725A2301B7FCAA70002B7A0 /* AppDelegate.m */,
 				0725A2321B7FCAA70002B7A0 /* ViewController.h */,
@@ -147,6 +170,7 @@
 		14E6BCB63C9B851F49E5C1BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0725A2631B8046DE0002B7A0 /* CoreLocation.framework */,
 				0725A2541B7FEB760002B7A0 /* MapKit.framework */,
 				6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */,
 			);
@@ -247,6 +271,11 @@
 				0725A2371B7FCAA70002B7A0 /* Main.storyboard in Resources */,
 				0725A23C1B7FCAA70002B7A0 /* LaunchScreen.xib in Resources */,
 				0725A2391B7FCAA70002B7A0 /* Images.xcassets in Resources */,
+				0725A25E1B8039C20002B7A0 /* wallpaper_1600x1200_planet_power_02.jpg in Resources */,
+				0725A25F1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg in Resources */,
+				0725A25D1B8039C20002B7A0 /* BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg in Resources */,
+				0725A25C1B8039C20002B7A0 /* BMW-K1600-GT-Wallpaper-04.jpg in Resources */,
+				0725A25B1B8039C20002B7A0 /* BMW motorrad maze.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +330,7 @@
 				A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */,
 				0725A2311B7FCAA70002B7A0 /* AppDelegate.m in Sources */,
 				0725A22E1B7FCAA70002B7A0 /* main.m in Sources */,
+				0725A2621B8046BE0002B7A0 /* LocationSingleton.m in Sources */,
 				A907D8A21B7FFC0500DF461D /* RidingViewController.m in Sources */,
 				0725A2531B7FEA320002B7A0 /* MainViewController.m in Sources */,
 			);
