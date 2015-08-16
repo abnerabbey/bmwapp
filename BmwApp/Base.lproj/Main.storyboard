@@ -89,7 +89,7 @@
                                     <constraint firstAttribute="width" constant="253" id="QNW-tZ-XHS"/>
                                     <constraint firstAttribute="width" secondItem="NIn-C1-Evm" secondAttribute="height" multiplier="11:10" id="lvG-ge-9a7"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -97,14 +97,26 @@
                                     <action selector="popUpButton:" destination="ohQ-Qd-7Yb" eventType="touchUpInside" id="sl3-gd-eZR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-nI-JsS">
+                                <rect key="frame" x="174" y="289" width="253" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="253" id="dTZ-oc-RYR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="j6z-nI-JsS" secondAttribute="centerX" constant="-0.5" id="cF1-ZM-IYx"/>
                             <constraint firstAttribute="centerX" secondItem="NIn-C1-Evm" secondAttribute="centerX" constant="-0.5" id="eOv-wQ-r6n"/>
                             <constraint firstAttribute="centerY" secondItem="NIn-C1-Evm" secondAttribute="centerY" id="se0-8h-Vt2"/>
+                            <constraint firstAttribute="centerY" secondItem="j6z-nI-JsS" secondAttribute="centerY" constant="0.5" id="xGi-vi-tWf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="butLabel" destination="j6z-nI-JsS" id="Qsu-4o-nBM"/>
                         <outlet property="endRideButton" destination="I0j-eY-feY" id="sIh-ep-sUK"/>
                         <outlet property="popupbutton" destination="NIn-C1-Evm" id="Vqh-cp-3xI"/>
                         <outlet property="ridingMapView" destination="hHt-jO-Mji" id="XGc-Nf-FB9"/>

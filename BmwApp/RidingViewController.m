@@ -22,10 +22,18 @@
     Vector *biggestVec;
     CMMotionManager *motionMan;
     ColisionDetector *colDetector;
+    NSUserDefaults *sharedData;
+    NSTimer *timer;
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(methodB) userInfo:nil repeats:YES];
+    sharedData = [[NSUserDefaults alloc] initWithSuiteName:@"group.motoRide"];
+    [sharedData setObject: @"On Ride" forKey:@"status"];
+    [sharedData synchronize];
     self.popupbutton.transform = CGAffineTransformMakeTranslation(0, 600);
     [UIView animateWithDuration:0.5 animations: ^{
             self.popupbutton.transform = CGAffineTransformIdentity;
@@ -43,27 +51,28 @@
          
          {
              dispatch_async(dispatch_get_main_queue(), ^{
+                 
                  myVec = [[Vector alloc] initWithF:[NSArray arrayWithObjects:[NSNumber numberWithDouble:accelerometerData.acceleration.x],[NSNumber numberWithDouble:accelerometerData.acceleration.y], [NSNumber numberWithDouble:accelerometerData.acceleration.z], nil]];
                  if ([colDetector isNewForceBigger:biggestVec v:myVec]){
                      biggestVec = myVec;
                  }
+                 NSLog(@"%.2f", [myVec getMagnitud]);
                  
-                 self.popupbutton.titleLabel.text = @"On Ride";
-                 //Do Something with the data
-                 
-                 if ([colDetector colHasOcurred:biggestVec value:12]){
+                 if ([colDetector colHasOcurred:biggestVec value:10]){
                      //                     self.statusL.text = @"Ha Ocurrido un accidente";
                      
                      //Ocurrio un Accidente
-                     self.popupbutton.titleLabel.text = @"Alert! Tap to Cancel!";
+                     self.butLabel.text = @"Alert!";
+                     [sharedData setObject: self.butLabel.text forKey:@"status"];
+                     [sharedData synchronize];
                      
                      
                  } else {
                      //                     self.statusL.text = @"Todo Esta bien";
                      
                      //Todo esta bien
-                     
-                     
+                     self.butLabel.text = @"On Ride";
+                     //Do Something with the data
                      [self restartValue];
                  }
              });
@@ -90,6 +99,16 @@
     self.popupbutton.transform = CGAffineTransformIdentity;
 }
 
+- (void) methodB{
+    
+    NSLog(@"cadena %@", [sharedData valueForKey:@"status"] );
+    if ([[sharedData valueForKey:@"L"]  isEqualToString: @"M"]) {
+        [self restartValue];
+    }
+    [sharedData setObject: self.butLabel.text forKey:@"status"];
+    [sharedData setValue:@"N" forKey:@"L"];
+}
+
 /*
  #pragma mark - Navigation
  
@@ -107,7 +126,8 @@
 
 - (IBAction)popUpButton:(id)sender {
     [self restartValue];
-    
+    [sharedData setObject: self.butLabel.text forKey:@"status"];
+    [sharedData synchronize];
     //Cancelar Alarma!!!
     
 }

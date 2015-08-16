@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *ridingMapView;
 @property (weak, nonatomic) IBOutlet UIButton *endRideButton;
 @property (weak, nonatomic) IBOutlet UIButton *popupbutton;
+@property (weak, nonatomic) IBOutlet UILabel *butLabel;
 
 // MARK: Actions
 
