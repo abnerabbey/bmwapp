@@ -29,9 +29,11 @@
     
     firstTime = YES;
     
-    UIBarButtonItem *rideButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStyleDone target:self action:@selector(settings)];
+    /*UIBarButtonItem *rideButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStyleDone target:self action:@selector(settings)];
     rideButton.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = rideButton;
+    self.navigationItem.rightBarButtonItem = rideButton;*/
+    
+    self.navigationItem.title = @"Ride";
     
     self.rideButton.layer.cornerRadius = 6.0;
 }

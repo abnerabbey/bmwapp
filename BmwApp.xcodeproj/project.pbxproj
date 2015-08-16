@@ -23,6 +23,9 @@
 		0725A25F1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A25A1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg */; };
 		0725A2621B8046BE0002B7A0 /* LocationSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2611B8046BE0002B7A0 /* LocationSingleton.m */; };
 		0725A2641B8046DE0002B7A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0725A2631B8046DE0002B7A0 /* CoreLocation.framework */; };
+		0725A2671B8060810002B7A0 /* RecentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2661B8060810002B7A0 /* RecentsViewController.m */; };
+		0725A26A1B8070C70002B7A0 /* Clock Filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2681B8070C70002B7A0 /* Clock Filled@2x.png */; };
+		0725A26B1B8070C70002B7A0 /* Motorcycle Filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2691B8070C70002B7A0 /* Motorcycle Filled@2x.png */; };
 		A907D8A21B7FFC0500DF461D /* RidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A11B7FFC0500DF461D /* RidingViewController.m */; };
 		A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A41B800F4000DF461D /* ContactsViewController.m */; };
 		E01EFCF11B8052A000000ADF /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01EFCF01B8052A000000ADF /* Vector.swift */; };
@@ -65,6 +68,10 @@
 		0725A2601B8046BE0002B7A0 /* LocationSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationSingleton.h; path = ../LocationSingleton.h; sourceTree = "<group>"; };
 		0725A2611B8046BE0002B7A0 /* LocationSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationSingleton.m; path = ../LocationSingleton.m; sourceTree = "<group>"; };
 		0725A2631B8046DE0002B7A0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0725A2651B8060810002B7A0 /* RecentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentsViewController.h; sourceTree = "<group>"; };
+		0725A2661B8060810002B7A0 /* RecentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentsViewController.m; sourceTree = "<group>"; };
+		0725A2681B8070C70002B7A0 /* Clock Filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clock Filled@2x.png"; sourceTree = "<group>"; };
+		0725A2691B8070C70002B7A0 /* Motorcycle Filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Motorcycle Filled@2x.png"; sourceTree = "<group>"; };
 		49FA5A96BFDF7BC3EAC57965 /* Pods-BmwApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.release.xcconfig"; sourceTree = "<group>"; };
 		6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BmwApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A907D8A01B7FFC0500DF461D /* RidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RidingViewController.h; sourceTree = "<group>"; };
@@ -123,6 +130,8 @@
 			children = (
 				0725A2601B8046BE0002B7A0 /* LocationSingleton.h */,
 				0725A2611B8046BE0002B7A0 /* LocationSingleton.m */,
+				0725A2681B8070C70002B7A0 /* Clock Filled@2x.png */,
+				0725A2691B8070C70002B7A0 /* Motorcycle Filled@2x.png */,
 				0725A2561B8039C20002B7A0 /* BMW motorrad maze.jpg */,
 				0725A2571B8039C20002B7A0 /* BMW-K1600-GT-Wallpaper-04.jpg */,
 				0725A2581B8039C20002B7A0 /* BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg */,
@@ -133,6 +142,8 @@
 				0725A2321B7FCAA70002B7A0 /* ViewController.h */,
 				0725A2331B7FCAA70002B7A0 /* ViewController.m */,
 				0725A2351B7FCAA70002B7A0 /* Main.storyboard */,
+				0725A2651B8060810002B7A0 /* RecentsViewController.h */,
+				0725A2661B8060810002B7A0 /* RecentsViewController.m */,
 				A907D8A31B800F4000DF461D /* ContactsViewController.h */,
 				E01EFCF21B8052AA00000ADF /* ColisionDetector.swift */,
 				E01EFCF01B8052A000000ADF /* Vector.swift */,
@@ -277,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0725A2371B7FCAA70002B7A0 /* Main.storyboard in Resources */,
+				0725A26A1B8070C70002B7A0 /* Clock Filled@2x.png in Resources */,
+				0725A26B1B8070C70002B7A0 /* Motorcycle Filled@2x.png in Resources */,
 				0725A23C1B7FCAA70002B7A0 /* LaunchScreen.xib in Resources */,
 				0725A2391B7FCAA70002B7A0 /* Images.xcassets in Resources */,
 				0725A25E1B8039C20002B7A0 /* wallpaper_1600x1200_planet_power_02.jpg in Resources */,
@@ -339,6 +352,7 @@
 				E01EFCF11B8052A000000ADF /* Vector.swift in Sources */,
 				0725A2311B7FCAA70002B7A0 /* AppDelegate.m in Sources */,
 				0725A22E1B7FCAA70002B7A0 /* main.m in Sources */,
+				0725A2671B8060810002B7A0 /* RecentsViewController.m in Sources */,
 				0725A2621B8046BE0002B7A0 /* LocationSingleton.m in Sources */,
 				A907D8A21B7FFC0500DF461D /* RidingViewController.m in Sources */,
 				0725A2531B7FEA320002B7A0 /* MainViewController.m in Sources */,
