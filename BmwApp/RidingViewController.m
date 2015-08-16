@@ -26,6 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.popupbutton.transform = CGAffineTransformMakeTranslation(0, 600);
+    [UIView animateWithDuration:0.5 animations: ^{
+            self.popupbutton.transform = CGAffineTransformIdentity;
+    }];
     // Do any additional setup after loading the view.
     colDetector = [[ColisionDetector alloc] init];
     startingValues = [NSArray arrayWithObjects:[NSNumber numberWithDouble:0.0],[NSNumber numberWithDouble:0.0], [NSNumber numberWithDouble:0.0], nil];
@@ -44,12 +48,14 @@
                      biggestVec = myVec;
                  }
                  
+                 self.popupbutton.titleLabel.text = @"On Ride";
                  //Do Something with the data
                  
                  if ([colDetector colHasOcurred:biggestVec value:12]){
                      //                     self.statusL.text = @"Ha Ocurrido un accidente";
                      
                      //Ocurrio un Accidente
+                     self.popupbutton.titleLabel.text = @"Alert! Tap to Cancel!";
                      
                      
                  } else {
@@ -75,9 +81,13 @@
 
 - (void)restartValue{
     biggestVec = [[Vector alloc] initWithF:startingValues];
-    
+    self.popupbutton.titleLabel.text = @"On Ride";
     //Reinicia el algoritmo del acelerometro
     
+}
+
+- (void)AnimationsS{
+    self.popupbutton.transform = CGAffineTransformIdentity;
 }
 
 /*
@@ -94,4 +104,14 @@
     [self restartValue];
     [self dismissViewControllerAnimated:false completion:nil];
 }
+
+- (IBAction)popUpButton:(id)sender {
+    [self restartValue];
+    
+    //Cancelar Alarma!!!
+    
+}
+
+
+
 @end
