@@ -97,6 +97,7 @@
 
 - (IBAction)savePressed:(UIBarButtonItem *)sender {
     [self saveUserValues];
+    [self performSegueWithIdentifier:@"startApp" sender:nil];
     
 }
 

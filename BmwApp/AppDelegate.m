@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 @interface AppDelegate ()
 
 @end
@@ -19,17 +19,10 @@
 {
     
     [Parse setApplicationId:@"gEDkRgp5JanBICu7PWXZVGBUS07I9bVvcWvfDIG1" clientKey:@"wQFxF9FHYYelJZQzE1Iuuutf9bKrU7R3Qu0zJfii"];
-    [PFFacebookUtils initializeFacebook];
+    [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                                                 openURL:url
-                                                       sourceApplication:sourceApplication
-                                                              annotation:annotation];
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -46,14 +39,19 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
-    [FBSDKAppEvents activateApp];
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    [[PFFacebookUtils session] close];
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBSDKAppEvents activateApp];
 }
 
 @end
