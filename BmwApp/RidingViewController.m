@@ -11,13 +11,13 @@
 #import "BMwApp-Swift.h"
 #import "LocationSingleton.h"
 #import <Parse/Parse.h>
+#import "RidersManager.h"
 
 int counter = 30;// segun yo este es el contador :/
 
 
 @interface RidingViewController ()<MKMapViewDelegate>
 @property (nonatomic, strong) LocationSingleton *locationManager;
-@property (nonatomic, strong) UILabel *label;
 @end
 
 @implementation RidingViewController
@@ -43,8 +43,10 @@ int counter = 30;// segun yo este es el contador :/
     
     self.ridingMapView.showsUserLocation = YES;
     self.locationManager = [LocationSingleton sharedInstace];
-    self.ridingMapView.userTrackingMode = MKUserTrackingModeFollow;
+//    self.ridingMapView.userTrackingMode = MKUserTrackingModeFollow;
     [self.locationManager startNewTrip];
+    
+    
     self.ridingMapView.delegate = self;
     // Do any additional setup after loading the view.
     timer = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(methodB) userInfo:nil repeats:YES];
@@ -67,7 +69,7 @@ int counter = 30;// segun yo este es el contador :/
                  if ([colDetector isNewForceBigger:biggestVec v:myVec]){
                      biggestVec = myVec;
                  }
-                 NSLog(@"%.2f", [myVec getMagnitud]);
+//                 NSLog(@"%.2f", [myVec getMagnitud]);
                  
                  if ([colDetector colHasOcurred:biggestVec value:10]){
                      //                     self.statusL.text = @"Ha Ocurrido un accidente";
@@ -93,31 +95,28 @@ int counter = 30;// segun yo este es el contador :/
          }];
     }
     
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 60, 320, 40)];
-    self.label.text = @"0";
-    [self.label setTextColor:[UIColor blackColor]];
-    [self.view addSubview:self.label];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationUpdated) name:@"locationDistanceUpdated" object:nil];
 
 }
 
+
 -(void)locationUpdated{
     
+self.multiplierLabel.text = [NSString stringWithFormat:@"%dx",  (int)self.locationManager.mpManager.session.connectedPeers.count + 1];    self.pointsLabel.text = [NSString stringWithFormat:@"Distance %@ m", self.locationManager.realDistance];
+    self.distanceLabel .text = [NSString stringWithFormat:@"Points %@", self.locationManager.currentDistance];
     
-    self.label.text = [NSString stringWithFormat:@"Distance %@", self.locationManager.currentDistance];
+    [self.ridingMapView setRegion:MKCoordinateRegionMakeWithDistance(self.locationManager.locationManager.location.coordinate, 5, 5)];
     
+    MKMapCamera *newCamera = [[self.ridingMapView camera] copy];
+    [newCamera setPitch:76.0]; // or newCamera.heading + 90.0 % 360.0
+    [self.ridingMapView setCamera:newCamera animated:NO];
+
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
 
-    [self.ridingMapView setRegion:MKCoordinateRegionMakeWithDistance(self.locationManager.locationManager.location.coordinate, 20, 20)];
     
-    MKMapCamera *newCamera = [[self.ridingMapView camera] copy];
-    [newCamera setPitch:70.0]; // or newCamera.heading + 90.0 % 360.0
-    [self.ridingMapView setCamera:newCamera animated:NO];
-    
-    NSLog(@"aqui");
 }
 
 
@@ -147,7 +146,7 @@ int counter = 30;// segun yo este es el contador :/
 
 - (void) methodB{
     
-    NSLog(@"cadena %@", [sharedData valueForKey:@"status"] );
+   // NSLog(@"cadena %@", [sharedData valueForKey:@"status"] );
     if ([[sharedData valueForKey:@"L"]  isEqualToString: @"M"]) {
         [self restartValue];
     }
@@ -168,7 +167,7 @@ int counter = 30;// segun yo este es el contador :/
 
 - (void) triggerAlarm{
     count = count - 1;
-    NSLog(@"%d", count);
+//    NSLog(@"%d", count);
     
     if (count <= 0) {
         count = 0;
@@ -218,7 +217,6 @@ int counter = 30;// segun yo este es el contador :/
 
 - (IBAction)endRideButtonTapped:(UIButton *)sender {
     
-    
     [self restartValue];
     PFUser *user = [PFUser currentUser];
     
@@ -236,7 +234,6 @@ int counter = 30;// segun yo este es el contador :/
 
     self.locationManager = nil;
     self.ridingMapView.delegate = nil;
-    
 }
 
 @end

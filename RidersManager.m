@@ -104,8 +104,15 @@
     
     if(state==MCSessionStateConnected){
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"accepted" object:nil userInfo:@{@"peer":peerID}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"gotNewRider" object:nil userInfo:@{@"peer":peerID}];
         
+        
+        
+    }
+    else if (state == MCSessionStateNotConnected){
+    
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"gotNewRider" object:nil userInfo:@{@"peer":peerID}];
+
     }
 }
 

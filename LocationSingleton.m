@@ -7,10 +7,13 @@
 //
 
 #import "LocationSingleton.h"
+#import "RidersManager.h"
 
 @interface LocationSingleton ()
 
 @property (nonatomic, strong) CLLocation *lastDistance;
+
+
 @end
 
 @implementation LocationSingleton
@@ -47,15 +50,26 @@
     
     self.currentDistance = [[NSNumber alloc] initWithInt:0];
     
+    self.mpManager = [RidersManager sharedManager];
+    [self.mpManager startBrowsing];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newRider) name:@"gotNewRider" object:nil];
+}
+
+-(void)newRider {
+
+    
+    
 
 }
 
 -(void)stopTrip{
 
-    self.locationManager.stopUpdatingLocation;
+    [self.locationManager stopUpdatingLocation];
     
     self.currentDistance = @0;
-
+    self.realDistance = @0;
+    self.mpManager = nil;
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
@@ -66,8 +80,21 @@
     }
     
     CLLocation *newDistance = locations.lastObject;
-    int newDistanceMeters = self.currentDistance.intValue + [newDistance distanceFromLocation:self.lastDistance];
-        NSLog(@"%d", newDistanceMeters);
+    int multiplier;
+    
+    if(self.mpManager.session.connectedPeers.count>0){
+        multiplier = (int)self.mpManager.session.connectedPeers.count +1;
+        NSLog(@"distance multiplied");
+    }
+    else{
+        multiplier = 1;
+    }
+    
+    int newDistanceMeters = self.currentDistance.intValue + ([newDistance distanceFromLocation:self.lastDistance]*multiplier);
+    
+    int realdistance = self.currentDistance.intValue + ([newDistance distanceFromLocation:self.lastDistance]);
+
+    self.realDistance = [NSNumber numberWithInt:realdistance];
     self.currentDistance = [NSNumber numberWithInt:newDistanceMeters];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"locationDistanceUpdated" object:nil userInfo:@{@"currentDistance": self.currentDistance}];

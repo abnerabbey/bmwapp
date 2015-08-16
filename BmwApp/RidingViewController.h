@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *endRideButton;
 @property (weak, nonatomic) IBOutlet UIView *alertViewR;
 @property (weak, nonatomic) IBOutlet UILabel *counterLabel;
+@property (weak, nonatomic) IBOutlet UILabel *multiplierLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 
 // MARK: Actions
 
