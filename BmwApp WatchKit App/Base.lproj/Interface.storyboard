@@ -22,6 +22,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="button" destination="uIT-2A-Ras" id="Gi9-se-3Zr"/>
                         <outlet property="messageLabel" destination="SFW-7F-pYw" id="Hl4-wS-89l"/>
                     </connections>
                 </controller>

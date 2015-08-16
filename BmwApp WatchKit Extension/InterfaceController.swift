@@ -14,11 +14,13 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var messageLabel: WKInterfaceLabel!
     
+    @IBOutlet weak var button: WKInterfaceButton!
     
     let sharedData = NSUserDefaults(suiteName: "group.motoRide")
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        self.changing()
         self.messageLabel.setText(sharedData?.objectForKey("status") as? String)
         // Configure interface objects here.
     }
@@ -26,13 +28,25 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        self.changing()
         self.messageLabel.setText(sharedData?.objectForKey("status") as? String)
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        self.changing()
         self.messageLabel.setText(sharedData?.objectForKey("status") as? String)
+    }
+    
+    func changing(){
+        if (self.sharedData?.valueForKey("status") as! String == "Danger"){
+            self.button.setTitle("Dont Worry")
+            self.button.setBackgroundColor(UIColor.greenColor());
+        } else {
+            self.button.setTitle("Cancel Alarm")
+            self.button.setBackgroundColor(UIColor.redColor());
+        }
     }
     
     

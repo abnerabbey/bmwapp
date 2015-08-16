@@ -67,6 +67,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-jO-Mji">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0j-eY-feY">
                                 <rect key="frame" x="16" y="534" width="568" height="58"/>
                                 <color key="backgroundColor" red="0.45883318664637879" green="0.47639685778851432" blue="0.93310053660000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -119,7 +122,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="9Tm-qb-Jtd"/>
                                     <constraint firstAttribute="centerY" secondItem="vOw-6k-co1" secondAttribute="centerY" id="DLb-P5-xvy"/>
@@ -131,9 +134,6 @@
                                     <constraint firstAttribute="width" secondItem="pXA-bl-wt8" secondAttribute="height" multiplier="1:1" id="sU9-fT-qJV"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-jO-Mji">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

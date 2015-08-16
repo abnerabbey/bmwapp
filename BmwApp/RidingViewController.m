@@ -10,7 +10,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import "BmwApp-Swift.h"
 
-int counter = 30;
+int counter = 30;// segun yo este es el contador :/
 
 @interface RidingViewController ()
 
@@ -25,6 +25,7 @@ int counter = 30;
     CMMotionManager *motionMan;
     ColisionDetector *colDetector;
     NSTimer *timer;
+    NSTimer *timerAlarm;
     NSUserDefaults *sharedData;
     
 }
@@ -57,6 +58,7 @@ int counter = 30;
                  if ([colDetector colHasOcurred:biggestVec value:10]){
                      //                     self.statusL.text = @"Ha Ocurrido un accidente";
                      [self ventanaEmergente];
+                     timerAlarm = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(triggerAlarm) userInfo:nil repeats:YES];
                      //Ocurrio un Accidente
 //                     self.butLabel.text = @"Alert!";
                      [sharedData setObject: @"Danger!" forKey:@"status"];
@@ -102,34 +104,44 @@ int counter = 30;
     if ([[sharedData valueForKey:@"L"]  isEqualToString: @"M"]) {
         [self restartValue];
     }
-//    [sharedData setObject: self.butLabel.text forKey:@"status"];
+    [sharedData setObject: @"Ok" forKey:@"status"];
     [sharedData setValue:@"N" forKey:@"L"];
 }
 
 - (void) ventanaEmergente {
-    [UIView animateWithDuration:0.5 animations:^{
+    [self.MasterView bringSubviewToFront:self.alertViewR];
+    [UIView animateWithDuration:0.6 animations:^{
         [self estadoFinal];
     }];
-    [self.MasterView bringSubviewToFront:self.alertViewR];
+    
+}
+
+- (void) triggerAlarm{
+    counter = counter - 1;
+    self.counterLabel.text = [NSString stringWithFormat:@"%.20d", counter];
+    if (counter <= 0) {
+        //triggerAlarm
+    }
 }
 
 - (void) desapareceVentana {
-    [UIView animateWithDuration:0.5 animations:^{
+    [self.MasterView sendSubviewToBack:self.alertViewR];
+    [UIView animateWithDuration:0.6 animations:^{
         [self estadoFinal];
     }];
-    [self.MasterView sendSubviewToBack:self.alertViewR];
+    
 }
 
 - (void) estadoFinal {
     self.alertViewR.transform = CGAffineTransformIdentity;
     self.alertViewR.alpha = 1;
-    self.counterLabel.text = @"30"; //poner counter aqui
+    
 }
 
 - (void) estadoInicial{
     self.alertViewR.transform = CGAffineTransformMakeScale(30, 30);
     self.alertViewR.alpha = 0;
-    self.counterLabel.text = @"30"; //poner counter aqui
+    
 }
 
 - (IBAction)popUpButton:(id)sender {
