@@ -24,8 +24,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.tableView.delegate = self;
-//    self.tableView.dataSource = self;
+    locationManager = [LocationSingleton sharedInstace];
+    [locationManager.locationManager requestWhenInUseAuthorization];
+    
+    firstTime = YES;
+    
+    UIBarButtonItem *rideButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStyleDone target:self action:@selector(settings)];
+    rideButton.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = rideButton;
+    
+    self.rideButton.layer.cornerRadius = 6.0;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if(firstTime){
+        PFUser *currentUser = [PFUser currentUser];
+        if(!currentUser){
+            ViewController *loginView = [[self storyboard] instantiateViewControllerWithIdentifier:@"login"];
+            UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:loginView];
+            [self presentViewController:nv animated:YES completion:nil];
+        }
+        firstTime = NO;
+    }
+}
+
+- (void)settings
+{
+    
 }
 
 
