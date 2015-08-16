@@ -52,6 +52,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self performSegueWithIdentifier:@"detail" sender:self];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

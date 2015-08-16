@@ -26,6 +26,7 @@
 		0725A2671B8060810002B7A0 /* RecentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2661B8060810002B7A0 /* RecentsViewController.m */; };
 		0725A26A1B8070C70002B7A0 /* Clock Filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2681B8070C70002B7A0 /* Clock Filled@2x.png */; };
 		0725A26B1B8070C70002B7A0 /* Motorcycle Filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2691B8070C70002B7A0 /* Motorcycle Filled@2x.png */; };
+		0725A26E1B80AFE90002B7A0 /* DetailHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A26D1B80AFE90002B7A0 /* DetailHistoryViewController.m */; };
 		A907D8A21B7FFC0500DF461D /* RidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A11B7FFC0500DF461D /* RidingViewController.m */; };
 		A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A41B800F4000DF461D /* ContactsViewController.m */; };
 		E01EFCF11B8052A000000ADF /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01EFCF01B8052A000000ADF /* Vector.swift */; };
@@ -72,6 +73,8 @@
 		0725A2661B8060810002B7A0 /* RecentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentsViewController.m; sourceTree = "<group>"; };
 		0725A2681B8070C70002B7A0 /* Clock Filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clock Filled@2x.png"; sourceTree = "<group>"; };
 		0725A2691B8070C70002B7A0 /* Motorcycle Filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Motorcycle Filled@2x.png"; sourceTree = "<group>"; };
+		0725A26C1B80AFE90002B7A0 /* DetailHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailHistoryViewController.h; sourceTree = "<group>"; };
+		0725A26D1B80AFE90002B7A0 /* DetailHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailHistoryViewController.m; sourceTree = "<group>"; };
 		49FA5A96BFDF7BC3EAC57965 /* Pods-BmwApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.release.xcconfig"; sourceTree = "<group>"; };
 		6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BmwApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A907D8A01B7FFC0500DF461D /* RidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RidingViewController.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				0725A2321B7FCAA70002B7A0 /* ViewController.h */,
 				0725A2331B7FCAA70002B7A0 /* ViewController.m */,
 				0725A2351B7FCAA70002B7A0 /* Main.storyboard */,
+				0725A26C1B80AFE90002B7A0 /* DetailHistoryViewController.h */,
+				0725A26D1B80AFE90002B7A0 /* DetailHistoryViewController.m */,
 				0725A2651B8060810002B7A0 /* RecentsViewController.h */,
 				0725A2661B8060810002B7A0 /* RecentsViewController.m */,
 				A907D8A31B800F4000DF461D /* ContactsViewController.h */,
@@ -351,6 +356,7 @@
 				A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */,
 				E01EFCF11B8052A000000ADF /* Vector.swift in Sources */,
 				0725A2311B7FCAA70002B7A0 /* AppDelegate.m in Sources */,
+				0725A26E1B80AFE90002B7A0 /* DetailHistoryViewController.m in Sources */,
 				0725A22E1B7FCAA70002B7A0 /* main.m in Sources */,
 				0725A2671B8060810002B7A0 /* RecentsViewController.m in Sources */,
 				0725A2621B8046BE0002B7A0 /* LocationSingleton.m in Sources */,
