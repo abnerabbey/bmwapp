@@ -54,7 +54,7 @@
         <!--Riding View Controller-->
         <scene sceneID="Nsu-90-hJ1">
             <objects>
-                <viewController id="ohQ-Qd-7Yb" customClass="RidingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ridin" id="ohQ-Qd-7Yb" customClass="RidingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nez-oc-X76"/>
                         <viewControllerLayoutGuide type="bottom" id="oUv-jf-SrH"/>
@@ -63,12 +63,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-jO-Mji">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-jO-Mji">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0j-eY-feY">
-                                <rect key="frame" x="0.0" y="522" width="600" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0j-eY-feY">
+                                <rect key="frame" x="16" y="534" width="568" height="58"/>
                                 <color key="backgroundColor" red="0.45883318664637879" green="0.47639685778851432" blue="0.93310053660000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="ZHW-b4-1gj"/>
+                                    <constraint firstAttribute="height" constant="58" id="dWQ-3f-JeV"/>
+                                </constraints>
                                 <state key="normal" title="END RIDE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,6 +83,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hHt-jO-Mji" firstAttribute="bottom" secondItem="oUv-jf-SrH" secondAttribute="top" id="8Fb-yT-4ak"/>
+                            <constraint firstItem="hHt-jO-Mji" firstAttribute="leading" secondItem="w10-rM-zNs" secondAttribute="leading" id="ALA-KQ-1Ht"/>
+                            <constraint firstAttribute="centerY" secondItem="I0j-eY-feY" secondAttribute="centerY" constant="-263" id="XZ9-zr-dQj"/>
+                            <constraint firstAttribute="centerX" secondItem="I0j-eY-feY" secondAttribute="centerX" id="aX2-oh-EXZ"/>
+                            <constraint firstItem="hHt-jO-Mji" firstAttribute="top" secondItem="w10-rM-zNs" secondAttribute="top" id="cHa-Yg-NGR"/>
+                            <constraint firstAttribute="trailing" secondItem="hHt-jO-Mji" secondAttribute="trailing" id="hei-NQ-dED"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="endRideButton" destination="I0j-eY-feY" id="sIh-ep-sUK"/>
@@ -87,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUE-Ld-Liw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284" y="869"/>
+            <point key="canvasLocation" x="1292" y="797"/>
         </scene>
         <!--Contacts View Controller-->
         <scene sceneID="hns-ST-RuM">
