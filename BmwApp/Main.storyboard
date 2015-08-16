@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -66,9 +67,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-jO-Mji">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0j-eY-feY">
                                 <rect key="frame" x="16" y="534" width="568" height="58"/>
                                 <color key="backgroundColor" red="0.45883318664637879" green="0.47639685778851432" blue="0.93310053660000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,11 +82,65 @@
                                     <action selector="endRideButtonTapped:" destination="ohQ-Qd-7Yb" eventType="touchUpInside" id="Rox-fg-e1Y"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXA-bl-wt8">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLx-3k-2Ep">
+                                        <rect key="frame" x="53" y="52" width="195" height="195"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="195" id="qrS-5Y-rcq"/>
+                                            <constraint firstAttribute="width" secondItem="SLx-3k-2Ep" secondAttribute="height" multiplier="1:1" id="seC-wy-32D"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="rojoPlano">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="popUpButton:" destination="ohQ-Qd-7Yb" eventType="touchUpInside" id="HWS-je-Bwf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you are Ok, please tap the button to deactivate the alarm!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfh-Nz-mMi">
+                                        <rect key="frame" x="67" y="108" width="166" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="166" id="Jkm-Y3-1PJ"/>
+                                            <constraint firstAttribute="width" secondItem="gfh-Nz-mMi" secondAttribute="height" multiplier="83:42" id="Oyz-gt-TvF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOw-6k-co1">
+                                        <rect key="frame" x="34" y="23" width="233" height="254"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="233" id="eKb-pq-QOR"/>
+                                            <constraint firstAttribute="width" secondItem="vOw-6k-co1" secondAttribute="height" multiplier="233:254" id="pzI-B7-4gA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="120"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.19" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9Tm-qb-Jtd"/>
+                                    <constraint firstAttribute="centerY" secondItem="vOw-6k-co1" secondAttribute="centerY" id="DLb-P5-xvy"/>
+                                    <constraint firstAttribute="centerX" secondItem="vOw-6k-co1" secondAttribute="centerX" constant="-0.5" id="HnP-N2-yBC"/>
+                                    <constraint firstAttribute="centerX" secondItem="gfh-Nz-mMi" secondAttribute="centerX" id="U0l-mC-9xO"/>
+                                    <constraint firstAttribute="centerY" secondItem="gfh-Nz-mMi" secondAttribute="centerY" id="a6L-0b-V00"/>
+                                    <constraint firstAttribute="centerY" secondItem="SLx-3k-2Ep" secondAttribute="centerY" constant="0.5" id="aXq-zW-bRJ"/>
+                                    <constraint firstAttribute="centerX" secondItem="SLx-3k-2Ep" secondAttribute="centerX" constant="-0.5" id="hE8-Ns-0yS"/>
+                                    <constraint firstAttribute="width" secondItem="pXA-bl-wt8" secondAttribute="height" multiplier="1:1" id="sU9-fT-qJV"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-jO-Mji">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="pXA-bl-wt8" secondAttribute="centerY" id="4s9-dz-C06"/>
                             <constraint firstItem="hHt-jO-Mji" firstAttribute="bottom" secondItem="oUv-jf-SrH" secondAttribute="top" id="8Fb-yT-4ak"/>
                             <constraint firstItem="hHt-jO-Mji" firstAttribute="leading" secondItem="w10-rM-zNs" secondAttribute="leading" id="ALA-KQ-1Ht"/>
+                            <constraint firstAttribute="centerX" secondItem="pXA-bl-wt8" secondAttribute="centerX" id="M4x-B8-ifG"/>
                             <constraint firstAttribute="centerY" secondItem="I0j-eY-feY" secondAttribute="centerY" constant="-263" id="XZ9-zr-dQj"/>
                             <constraint firstAttribute="centerX" secondItem="I0j-eY-feY" secondAttribute="centerX" id="aX2-oh-EXZ"/>
                             <constraint firstItem="hHt-jO-Mji" firstAttribute="top" secondItem="w10-rM-zNs" secondAttribute="top" id="cHa-Yg-NGR"/>
@@ -96,6 +148,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="MasterView" destination="w10-rM-zNs" id="OOr-8h-csG"/>
+                        <outlet property="alertViewR" destination="pXA-bl-wt8" id="ISR-sn-sW7"/>
+                        <outlet property="counterLabel" destination="vOw-6k-co1" id="H84-Ob-K2m"/>
                         <outlet property="endRideButton" destination="I0j-eY-feY" id="sIh-ep-sUK"/>
                         <outlet property="ridingMapView" destination="hHt-jO-Mji" id="XGc-Nf-FB9"/>
                     </connections>
@@ -392,5 +447,6 @@
     </scenes>
     <resources>
         <image name="BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg" width="1920" height="1200"/>
+        <image name="rojoPlano" width="600" height="600"/>
     </resources>
 </document>

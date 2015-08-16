@@ -13,8 +13,11 @@
 
 // MARK: Properties
 
+@property (strong, nonatomic) IBOutlet UIView *MasterView;
 @property (weak, nonatomic) IBOutlet MKMapView *ridingMapView;
 @property (weak, nonatomic) IBOutlet UIButton *endRideButton;
+@property (weak, nonatomic) IBOutlet UIView *alertViewR;
+@property (weak, nonatomic) IBOutlet UILabel *counterLabel;
 
 // MARK: Actions
 

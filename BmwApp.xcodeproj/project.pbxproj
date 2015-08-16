@@ -52,6 +52,13 @@
 		A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A41B800F4000DF461D /* ContactsViewController.m */; };
 		E01EFCF11B8052A000000ADF /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01EFCF01B8052A000000ADF /* Vector.swift */; };
 		E01EFCF31B8052AA00000ADF /* ColisionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01EFCF21B8052AA00000ADF /* ColisionDetector.swift */; };
+		E06FC12C1B80C4D600563579 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06FC12B1B80C4D600563579 /* InterfaceController.swift */; };
+		E06FC12E1B80C4D600563579 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06FC12D1B80C4D600563579 /* NotificationController.swift */; };
+		E06FC1301B80C4D600563579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E06FC12F1B80C4D600563579 /* Images.xcassets */; };
+		E06FC1341B80C4D600563579 /* BmwApp WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = E06FC1331B80C4D600563579 /* BmwApp WatchKit App.app */; };
+		E06FC13C1B80C4D600563579 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06FC13A1B80C4D600563579 /* Interface.storyboard */; };
+		E06FC13E1B80C4D600563579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E06FC13D1B80C4D600563579 /* Images.xcassets */; };
+		E06FC1411B80C4D600563579 /* BmwApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E06FC1261B80C4D600563579 /* BmwApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +69,35 @@
 			remoteGlobalIDString = 0725A2271B7FCAA70002B7A0;
 			remoteInfo = BmwApp;
 		};
+		E06FC1351B80C4D600563579 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0725A2201B7FCAA70002B7A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E06FC1321B80C4D600563579;
+			remoteInfo = "BmwApp WatchKit App";
+		};
+		E06FC13F1B80C4D600563579 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0725A2201B7FCAA70002B7A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E06FC1251B80C4D600563579;
+			remoteInfo = "BmwApp WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E06FC1481B80C4D600563579 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E06FC1411B80C4D600563579 /* BmwApp WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0725A2281B7FCAA70002B7A0 /* BmwApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BmwApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +163,18 @@
 		E01EFCEF1B8052A000000ADF /* BmwApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BmwApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		E01EFCF01B8052A000000ADF /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		E01EFCF21B8052AA00000ADF /* ColisionDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColisionDetector.swift; sourceTree = "<group>"; };
+		E06FC1261B80C4D600563579 /* BmwApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BmwApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E06FC1291B80C4D600563579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E06FC12A1B80C4D600563579 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E06FC12B1B80C4D600563579 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		E06FC12D1B80C4D600563579 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		E06FC12F1B80C4D600563579 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E06FC1331B80C4D600563579 /* BmwApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BmwApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E06FC1391B80C4D600563579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E06FC13B1B80C4D600563579 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		E06FC13D1B80C4D600563579 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E06FC1491B80C4EC00563579 /* BmwApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BmwApp.entitlements; sourceTree = "<group>"; };
+		E06FC14A1B80C4FD00563579 /* BmwApp WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BmwApp WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		E2CD28466B14303F75D16D6E /* Pods-BmwApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +214,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E06FC1231B80C4D600563579 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -175,6 +229,8 @@
 			children = (
 				0725A22A1B7FCAA70002B7A0 /* BmwApp */,
 				0725A2441B7FCAA70002B7A0 /* BmwAppTests */,
+				E06FC1271B80C4D600563579 /* BmwApp WatchKit Extension */,
+				E06FC1371B80C4D600563579 /* BmwApp WatchKit App */,
 				0725A2291B7FCAA70002B7A0 /* Products */,
 				CA08F6A33EE325B367BEF06E /* Pods */,
 				14E6BCB63C9B851F49E5C1BA /* Frameworks */,
@@ -186,6 +242,8 @@
 			children = (
 				0725A2281B7FCAA70002B7A0 /* BmwApp.app */,
 				0725A2411B7FCAA70002B7A0 /* BmwAppTests.xctest */,
+				E06FC1261B80C4D600563579 /* BmwApp WatchKit Extension.appex */,
+				E06FC1331B80C4D600563579 /* BmwApp WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +251,7 @@
 		0725A22A1B7FCAA70002B7A0 /* BmwApp */ = {
 			isa = PBXGroup;
 			children = (
+				E06FC1491B80C4EC00563579 /* BmwApp.entitlements */,
 				0725A2601B8046BE0002B7A0 /* LocationSingleton.h */,
 				0725A2611B8046BE0002B7A0 /* LocationSingleton.m */,
 				0725A2561B8039C20002B7A0 /* BMW motorrad maze.jpg */,
@@ -207,7 +266,6 @@
 				A907D8A31B800F4000DF461D /* ContactsViewController.h */,
 				E01EFCF21B8052AA00000ADF /* ColisionDetector.swift */,
 				E01EFCF01B8052A000000ADF /* Vector.swift */,
-				A02CF41F1B80BC98009AD983 /* Main.storyboard */,
 				A907D8A41B800F4000DF461D /* ContactsViewController.m */,
 				0725A2511B7FEA320002B7A0 /* MainViewController.h */,
 				0725A2521B7FEA320002B7A0 /* MainViewController.m */,
@@ -215,6 +273,7 @@
 				A01C7BDF1B809535008CEB90 /* AddUserInfoViewController.m */,
 				0725A2381B7FCAA70002B7A0 /* Images.xcassets */,
 				0725A23A1B7FCAA70002B7A0 /* LaunchScreen.xib */,
+				A02CF41F1B80BC98009AD983 /* Main.storyboard */,
 				A907D8A01B7FFC0500DF461D /* RidingViewController.h */,
 				A907D8A11B7FFC0500DF461D /* RidingViewController.m */,
 				A01C7BE51B809C02008CEB90 /* Address Book Wrappers */,
@@ -304,6 +363,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E06FC1271B80C4D600563579 /* BmwApp WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E06FC14A1B80C4FD00563579 /* BmwApp WatchKit Extension.entitlements */,
+				E06FC12B1B80C4D600563579 /* InterfaceController.swift */,
+				E06FC12D1B80C4D600563579 /* NotificationController.swift */,
+				E06FC12F1B80C4D600563579 /* Images.xcassets */,
+				E06FC1281B80C4D600563579 /* Supporting Files */,
+			);
+			path = "BmwApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		E06FC1281B80C4D600563579 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E06FC1291B80C4D600563579 /* Info.plist */,
+				E06FC12A1B80C4D600563579 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E06FC1371B80C4D600563579 /* BmwApp WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				E06FC13A1B80C4D600563579 /* Interface.storyboard */,
+				E06FC13D1B80C4D600563579 /* Images.xcassets */,
+				E06FC1381B80C4D600563579 /* Supporting Files */,
+			);
+			path = "BmwApp WatchKit App";
+			sourceTree = "<group>";
+		};
+		E06FC1381B80C4D600563579 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E06FC1391B80C4D600563579 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,10 +412,12 @@
 				0725A2241B7FCAA70002B7A0 /* Sources */,
 				0725A2251B7FCAA70002B7A0 /* Frameworks */,
 				0725A2261B7FCAA70002B7A0 /* Resources */,
+				E06FC1481B80C4D600563579 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E06FC1401B80C4D600563579 /* PBXTargetDependency */,
 			);
 			name = BmwApp;
 			productName = BmwApp;
@@ -342,6 +442,39 @@
 			productReference = 0725A2411B7FCAA70002B7A0 /* BmwAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E06FC1251B80C4D600563579 /* BmwApp WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E06FC1471B80C4D600563579 /* Build configuration list for PBXNativeTarget "BmwApp WatchKit Extension" */;
+			buildPhases = (
+				E06FC1221B80C4D600563579 /* Sources */,
+				E06FC1231B80C4D600563579 /* Frameworks */,
+				E06FC1241B80C4D600563579 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E06FC1361B80C4D600563579 /* PBXTargetDependency */,
+			);
+			name = "BmwApp WatchKit Extension";
+			productName = "BmwApp WatchKit Extension";
+			productReference = E06FC1261B80C4D600563579 /* BmwApp WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		E06FC1321B80C4D600563579 /* BmwApp WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E06FC1461B80C4D600563579 /* Build configuration list for PBXNativeTarget "BmwApp WatchKit App" */;
+			buildPhases = (
+				E06FC1311B80C4D600563579 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BmwApp WatchKit App";
+			productName = "BmwApp WatchKit App";
+			productReference = E06FC1331B80C4D600563579 /* BmwApp WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -353,10 +486,28 @@
 				TargetAttributes = {
 					0725A2271B7FCAA70002B7A0 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 27MUBRMHKJ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					0725A2401B7FCAA70002B7A0 = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 0725A2271B7FCAA70002B7A0;
+					};
+					E06FC1251B80C4D600563579 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 27MUBRMHKJ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					E06FC1321B80C4D600563579 = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -375,6 +526,8 @@
 			targets = (
 				0725A2271B7FCAA70002B7A0 /* BmwApp */,
 				0725A2401B7FCAA70002B7A0 /* BmwAppTests */,
+				E06FC1251B80C4D600563579 /* BmwApp WatchKit Extension */,
+				E06FC1321B80C4D600563579 /* BmwApp WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -400,6 +553,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E06FC1241B80C4D600563579 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E06FC1301B80C4D600563579 /* Images.xcassets in Resources */,
+				E06FC1341B80C4D600563579 /* BmwApp WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E06FC1311B80C4D600563579 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E06FC13C1B80C4D600563579 /* Interface.storyboard in Resources */,
+				E06FC13E1B80C4D600563579 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +606,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E06FC1221B80C4D600563579 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E06FC12E1B80C4D600563579 /* NotificationController.swift in Sources */,
+				E06FC12C1B80C4D600563579 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -442,6 +622,16 @@
 			isa = PBXTargetDependency;
 			target = 0725A2271B7FCAA70002B7A0 /* BmwApp */;
 			targetProxy = 0725A2421B7FCAA70002B7A0 /* PBXContainerItemProxy */;
+		};
+		E06FC1361B80C4D600563579 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E06FC1321B80C4D600563579 /* BmwApp WatchKit App */;
+			targetProxy = E06FC1351B80C4D600563579 /* PBXContainerItemProxy */;
+		};
+		E06FC1401B80C4D600563579 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E06FC1251B80C4D600563579 /* BmwApp WatchKit Extension */;
+			targetProxy = E06FC13F1B80C4D600563579 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -452,6 +642,14 @@
 				0725A23B1B7FCAA70002B7A0 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		E06FC13A1B80C4D600563579 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E06FC13B1B80C4D600563579 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -543,6 +741,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BmwApp/BmwApp.entitlements;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BmwApp/Address",
@@ -556,7 +756,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BmwApp;
 				SWIFT_OBJC_BRIDGING_HEADER = "BmwApp/BmwApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -568,6 +768,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BmwApp/BmwApp.entitlements;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BmwApp/Address",
@@ -581,7 +783,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BmwApp;
 				SWIFT_OBJC_BRIDGING_HEADER = "BmwApp/BmwApp-Bridging-Header.h";
 			};
 			name = Release;
@@ -620,6 +822,71 @@
 			};
 			name = Release;
 		};
+		E06FC1421B80C4D600563579 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "BmwApp WatchKit Extension/BmwApp WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BmwApp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E06FC1431B80C4D600563579 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "BmwApp WatchKit Extension/BmwApp WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "BmwApp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E06FC1441B80C4D600563579 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = BmwApp_WatchKit_Extension;
+				INFOPLIST_FILE = "BmwApp WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		E06FC1451B80C4D600563579 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = BmwApp_WatchKit_Extension;
+				INFOPLIST_FILE = "BmwApp WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -646,6 +913,24 @@
 			buildConfigurations = (
 				0725A24F1B7FCAA70002B7A0 /* Debug */,
 				0725A2501B7FCAA70002B7A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E06FC1461B80C4D600563579 /* Build configuration list for PBXNativeTarget "BmwApp WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E06FC1441B80C4D600563579 /* Debug */,
+				E06FC1451B80C4D600563579 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E06FC1471B80C4D600563579 /* Build configuration list for PBXNativeTarget "BmwApp WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E06FC1421B80C4D600563579 /* Debug */,
+				E06FC1431B80C4D600563579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
