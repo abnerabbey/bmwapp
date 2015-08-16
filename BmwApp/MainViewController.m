@@ -7,12 +7,19 @@
 //
 
 #import "MainViewController.h"
+#import <Parse/Parse.h>
+#import "LocationSingleton.h"
+#import "RidingViewController.h"
 
 @interface MainViewController ()
 
 @end
 
 @implementation MainViewController
+{
+    BOOL firstTime;
+    LocationSingleton *locationManager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,7 +28,86 @@
 //    self.tableView.dataSource = self;
 }
 
-#pragma mark TableView Delegate
 
 
+- (IBAction)takeRide:(UIButton *)sender
+{
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"About to ride" message:@"How would you like to ride?" preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Ride Solo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        RidingViewController *ridingView = [[self storyboard] instantiateViewControllerWithIdentifier:@"ridin"];
+        UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:ridingView];
+        [self presentViewController:nv animated:NO completion:nil];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Ride Along" style:UIAlertActionStyleDefault handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

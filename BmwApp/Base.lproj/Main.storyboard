@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Xj3-Tv-8PD">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOW-9C-KUa">
                                 <rect key="frame" x="175" y="278" width="250" height="44"/>
                                 <color key="backgroundColor" red="0.14901960780000001" green="0.53725490200000003" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,7 +38,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Xj3-Tv-8PD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="E3f-Ob-mem"/>
+                            <constraint firstItem="Xj3-Tv-8PD" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="L3E-kn-TYX"/>
                             <constraint firstAttribute="centerY" secondItem="mOW-9C-KUa" secondAttribute="centerY" id="NHM-US-Fpq"/>
+                            <constraint firstItem="Xj3-Tv-8PD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="WvO-Tj-D0M"/>
+                            <constraint firstItem="Xj3-Tv-8PD" firstAttribute="centerX" secondItem="mOW-9C-KUa" secondAttribute="centerX" id="glM-CL-kkz"/>
                             <constraint firstAttribute="centerX" secondItem="mOW-9C-KUa" secondAttribute="centerX" id="lzt-nP-YWS"/>
                         </constraints>
                     </view>
@@ -50,7 +57,7 @@
         <!--Riding View Controller-->
         <scene sceneID="Nsu-90-hJ1">
             <objects>
-                <viewController id="ohQ-Qd-7Yb" customClass="RidingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ridin" id="ohQ-Qd-7Yb" customClass="RidingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nez-oc-X76"/>
                         <viewControllerLayoutGuide type="bottom" id="oUv-jf-SrH"/>
@@ -59,12 +66,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-jO-Mji">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-jO-Mji">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0j-eY-feY">
-                                <rect key="frame" x="0.0" y="522" width="600" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0j-eY-feY">
+                                <rect key="frame" x="16" y="534" width="568" height="58"/>
                                 <color key="backgroundColor" red="0.45883318664637879" green="0.47639685778851432" blue="0.93310053660000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="ZHW-b4-1gj"/>
+                                    <constraint firstAttribute="height" constant="58" id="dWQ-3f-JeV"/>
+                                </constraints>
                                 <state key="normal" title="END RIDE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,6 +86,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hHt-jO-Mji" firstAttribute="bottom" secondItem="oUv-jf-SrH" secondAttribute="top" id="8Fb-yT-4ak"/>
+                            <constraint firstItem="hHt-jO-Mji" firstAttribute="leading" secondItem="w10-rM-zNs" secondAttribute="leading" id="ALA-KQ-1Ht"/>
+                            <constraint firstAttribute="centerY" secondItem="I0j-eY-feY" secondAttribute="centerY" constant="-263" id="XZ9-zr-dQj"/>
+                            <constraint firstAttribute="centerX" secondItem="I0j-eY-feY" secondAttribute="centerX" id="aX2-oh-EXZ"/>
+                            <constraint firstItem="hHt-jO-Mji" firstAttribute="top" secondItem="w10-rM-zNs" secondAttribute="top" id="cHa-Yg-NGR"/>
+                            <constraint firstAttribute="trailing" secondItem="hHt-jO-Mji" secondAttribute="trailing" id="hei-NQ-dED"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="endRideButton" destination="I0j-eY-feY" id="sIh-ep-sUK"/>
@@ -83,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUE-Ld-Liw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284" y="869"/>
+            <point key="canvasLocation" x="1292" y="797"/>
         </scene>
         <!--Contacts View Controller-->
         <scene sceneID="hns-ST-RuM">
@@ -178,10 +197,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sko-CX-tG4">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sko-CX-tG4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEC-SZ-MrI">
+                                <rect key="frame" x="16" y="499" width="568" height="44"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.53725490200000003" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="ICO-94-04a"/>
+                                    <constraint firstAttribute="height" constant="44" id="LmT-zi-tD9"/>
                                 </constraints>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bEJ-yb-T5W">
@@ -220,19 +243,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bEJ-yb-T5W" firstAttribute="top" secondItem="sko-CX-tG4" secondAttribute="bottom" id="7X2-Sl-9Bl"/>
-                            <constraint firstItem="bEJ-yb-T5W" firstAttribute="bottom" secondItem="yXS-a6-5fR" secondAttribute="top" id="JkQ-26-x9e"/>
-                            <constraint firstItem="sko-CX-tG4" firstAttribute="trailing" secondItem="bEJ-yb-T5W" secondAttribute="trailing" id="WP5-kv-xTt"/>
-                            <constraint firstAttribute="trailing" secondItem="sko-CX-tG4" secondAttribute="trailing" id="gDR-XY-KJr"/>
-                            <constraint firstItem="sko-CX-tG4" firstAttribute="leading" secondItem="3Vv-Qg-mnB" secondAttribute="leading" id="hCk-xX-Dqe"/>
-                            <constraint firstItem="sko-CX-tG4" firstAttribute="top" secondItem="3Vv-Qg-mnB" secondAttribute="top" id="hdL-ZY-LqU"/>
-                            <constraint firstItem="sko-CX-tG4" firstAttribute="leading" secondItem="bEJ-yb-T5W" secondAttribute="leading" id="qYw-Nz-nqu"/>
+                            <constraint firstItem="sko-CX-tG4" firstAttribute="bottom" secondItem="yXS-a6-5fR" secondAttribute="top" id="4m2-8G-wv3"/>
+                            <constraint firstItem="sko-CX-tG4" firstAttribute="leading" secondItem="3Vv-Qg-mnB" secondAttribute="leading" id="6Yl-XD-9Rs"/>
+                            <constraint firstItem="SEC-SZ-MrI" firstAttribute="leading" secondItem="3Vv-Qg-mnB" secondAttribute="leadingMargin" id="Inf-Yi-CDV"/>
+                            <constraint firstItem="SEC-SZ-MrI" firstAttribute="centerX" secondItem="sko-CX-tG4" secondAttribute="centerX" id="O1A-h6-j94"/>
+                            <constraint firstAttribute="trailing" secondItem="sko-CX-tG4" secondAttribute="trailing" id="Xcl-Gs-HKz"/>
+                            <constraint firstItem="sko-CX-tG4" firstAttribute="top" secondItem="3Vv-Qg-mnB" secondAttribute="top" id="a4w-7i-Pl6"/>
+                            <constraint firstItem="yXS-a6-5fR" firstAttribute="top" secondItem="SEC-SZ-MrI" secondAttribute="bottom" constant="8" symbolic="YES" id="mdO-1r-psA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pXz-BY-ScT"/>
                     <connections>
                         <outlet property="mapView" destination="sko-CX-tG4" id="EQr-Dw-1nv"/>
-                        <outlet property="tableView" destination="bEJ-yb-T5W" id="mh2-Ag-rvT"/>
+                        <outlet property="rideButton" destination="SEC-SZ-MrI" id="gEZ-RV-d3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FU1-nT-nUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -354,10 +377,29 @@
             </objects>
             <point key="canvasLocation" x="329" y="66"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="9BP-FB-Z6V">
+            <objects>
+                <tabBarController id="oud-XM-hMp" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="hYe-Wt-oDo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PwL-XY-BDy" kind="relationship" relationship="viewControllers" id="7aI-td-kkN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rv0-Za-qeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-264" y="71"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="lNr-vx-lXc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PwL-XY-BDy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8F5-oV-F4a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QT9-Gq-4Id">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -373,4 +415,7 @@
             <point key="canvasLocation" x="975" y="66"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg" width="1920" height="1200"/>
+    </resources>
 </document>
