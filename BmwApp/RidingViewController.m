@@ -12,6 +12,9 @@
 #import "LocationSingleton.h"
 #import <Parse/Parse.h>
 
+int counter = 30;// segun yo este es el contador :/
+
+
 @interface RidingViewController ()<MKMapViewDelegate>
 @property (nonatomic, strong) LocationSingleton *locationManager;
 @property (nonatomic, strong) UILabel *label;

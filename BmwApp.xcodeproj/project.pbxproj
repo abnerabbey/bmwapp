@@ -12,7 +12,6 @@
 		0725A2341B7FCAA70002B7A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2331B7FCAA70002B7A0 /* ViewController.m */; };
 		0725A2391B7FCAA70002B7A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2381B7FCAA70002B7A0 /* Images.xcassets */; };
 		0725A23C1B7FCAA70002B7A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0725A23A1B7FCAA70002B7A0 /* LaunchScreen.xib */; };
-		0725A2481B7FCAA70002B7A0 /* BmwAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2471B7FCAA70002B7A0 /* BmwAppTests.m */; };
 		0725A2531B7FEA320002B7A0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2521B7FEA320002B7A0 /* MainViewController.m */; };
 		0725A2551B7FEB760002B7A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0725A2541B7FEB760002B7A0 /* MapKit.framework */; };
 		0725A25B1B8039C20002B7A0 /* BMW motorrad maze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2561B8039C20002B7A0 /* BMW motorrad maze.jpg */; };
@@ -70,13 +69,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0725A2421B7FCAA70002B7A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0725A2201B7FCAA70002B7A0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0725A2271B7FCAA70002B7A0;
-			remoteInfo = BmwApp;
-		};
 		E06FC1351B80C4D600563579 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0725A2201B7FCAA70002B7A0 /* Project object */;
@@ -117,7 +109,6 @@
 		0725A2331B7FCAA70002B7A0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0725A2381B7FCAA70002B7A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0725A23B1B7FCAA70002B7A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		0725A2411B7FCAA70002B7A0 /* BmwAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BmwAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0725A2461B7FCAA70002B7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0725A2471B7FCAA70002B7A0 /* BmwAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BmwAppTests.m; sourceTree = "<group>"; };
 		0725A2511B7FEA320002B7A0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -226,13 +217,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0725A23E1B7FCAA70002B7A0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E06FC1231B80C4D600563579 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				0725A2281B7FCAA70002B7A0 /* BmwApp.app */,
-				0725A2411B7FCAA70002B7A0 /* BmwAppTests.xctest */,
 				E06FC1261B80C4D600563579 /* BmwApp WatchKit Extension.appex */,
 				E06FC1331B80C4D600563579 /* BmwApp WatchKit App.app */,
 			);
@@ -272,6 +255,10 @@
 			children = (
 				A02CF4211B80C317009AD983 /* RidersManager.h */,
 				A02CF4221B80C317009AD983 /* RidersManager.m */,
+				07CA2C421B80F49A00C8625B /* joseluis.jpg */,
+				07CA2C3F1B80E39100C8625B /* ProfileViewController.h */,
+				07CA2C401B80E39100C8625B /* ProfileViewController.m */,
+				E06FC1491B80C4EC00563579 /* BmwApp.entitlements */,
 				0725A2601B8046BE0002B7A0 /* LocationSingleton.h */,
 				0725A2611B8046BE0002B7A0 /* LocationSingleton.m */,
 				0725A2561B8039C20002B7A0 /* BMW motorrad maze.jpg */,
@@ -288,10 +275,9 @@
 				0725A2321B7FCAA70002B7A0 /* ViewController.h */,
 				0725A2331B7FCAA70002B7A0 /* ViewController.m */,
 				A907D8A31B800F4000DF461D /* ContactsViewController.h */,
-				A907D8A41B800F4000DF461D /* ContactsViewController.m */,
 				E01EFCF21B8052AA00000ADF /* ColisionDetector.swift */,
 				E01EFCF01B8052A000000ADF /* Vector.swift */,
-				A02CF41F1B80BC98009AD983 /* Main.storyboard */,
+				A907D8A41B800F4000DF461D /* ContactsViewController.m */,
 				0725A2511B7FEA320002B7A0 /* MainViewController.h */,
 				0725A2521B7FEA320002B7A0 /* MainViewController.m */,
 				A01C7BDE1B809535008CEB90 /* AddUserInfoViewController.h */,
@@ -450,24 +436,6 @@
 			productReference = 0725A2281B7FCAA70002B7A0 /* BmwApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0725A2401B7FCAA70002B7A0 /* BmwAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0725A24E1B7FCAA70002B7A0 /* Build configuration list for PBXNativeTarget "BmwAppTests" */;
-			buildPhases = (
-				0725A23D1B7FCAA70002B7A0 /* Sources */,
-				0725A23E1B7FCAA70002B7A0 /* Frameworks */,
-				0725A23F1B7FCAA70002B7A0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0725A2431B7FCAA70002B7A0 /* PBXTargetDependency */,
-			);
-			name = BmwAppTests;
-			productName = BmwAppTests;
-			productReference = 0725A2411B7FCAA70002B7A0 /* BmwAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		E06FC1251B80C4D600563579 /* BmwApp WatchKit Extension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E06FC1471B80C4D600563579 /* Build configuration list for PBXNativeTarget "BmwApp WatchKit Extension" */;
@@ -512,20 +480,16 @@
 				TargetAttributes = {
 					0725A2271B7FCAA70002B7A0 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 27MUBRMHKJ;
+						DevelopmentTeam = K2B429BC39;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
 						};
 					};
-					0725A2401B7FCAA70002B7A0 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 0725A2271B7FCAA70002B7A0;
-					};
 					E06FC1251B80C4D600563579 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 27MUBRMHKJ;
+						DevelopmentTeam = K2B429BC39;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -551,7 +515,6 @@
 			projectRoot = "";
 			targets = (
 				0725A2271B7FCAA70002B7A0 /* BmwApp */,
-				0725A2401B7FCAA70002B7A0 /* BmwAppTests */,
 				E06FC1251B80C4D600563579 /* BmwApp WatchKit Extension */,
 				E06FC1321B80C4D600563579 /* BmwApp WatchKit App */,
 			);
@@ -577,13 +540,6 @@
 				07CA2C431B80F49A00C8625B /* joseluis.jpg in Resources */,
 				0725A25C1B8039C20002B7A0 /* BMW-K1600-GT-Wallpaper-04.jpg in Resources */,
 				0725A25B1B8039C20002B7A0 /* BMW motorrad maze.jpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0725A23F1B7FCAA70002B7A0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,14 +587,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0725A23D1B7FCAA70002B7A0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0725A2481B7FCAA70002B7A0 /* BmwAppTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E06FC1221B80C4D600563579 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -651,11 +599,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0725A2431B7FCAA70002B7A0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0725A2271B7FCAA70002B7A0 /* BmwApp */;
-			targetProxy = 0725A2421B7FCAA70002B7A0 /* PBXContainerItemProxy */;
-		};
 		E06FC1361B80C4D600563579 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E06FC1321B80C4D600563579 /* BmwApp WatchKit App */;
@@ -775,6 +718,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BmwApp/BmwApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -790,6 +735,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = BmwApp;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BmwApp/BmwApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -802,6 +748,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BmwApp/BmwApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -817,41 +765,8 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = BmwApp;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BmwApp/BmwApp-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		0725A24F1B7FCAA70002B7A0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BmwAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BmwApp.app/BmwApp";
-			};
-			name = Debug;
-		};
-		0725A2501B7FCAA70002B7A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BmwAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BmwApp.app/BmwApp";
 			};
 			name = Release;
 		};
@@ -937,15 +852,6 @@
 			buildConfigurations = (
 				0725A24C1B7FCAA70002B7A0 /* Debug */,
 				0725A24D1B7FCAA70002B7A0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0725A24E1B7FCAA70002B7A0 /* Build configuration list for PBXNativeTarget "BmwAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0725A24F1B7FCAA70002B7A0 /* Debug */,
-				0725A2501B7FCAA70002B7A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
