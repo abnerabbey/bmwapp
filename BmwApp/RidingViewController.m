@@ -25,6 +25,10 @@
     Vector *biggestVec;
     CMMotionManager *motionMan;
     ColisionDetector *colDetector;
+    NSTimer *timer;
+    NSTimer *timerAlarm;
+    NSUserDefaults *sharedData;
+    
 }
 
 - (void)viewDidLoad {
@@ -36,6 +40,9 @@
     [self.locationManager startNewTrip];
     self.ridingMapView.delegate = self;
     // Do any additional setup after loading the view.
+    timer = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(methodB) userInfo:nil repeats:YES];
+    sharedData = [[NSUserDefaults alloc] initWithSuiteName:@"group.motoRide"];
+    [sharedData setObject: @"OK" forKey:@"status"];
     colDetector = [[ColisionDetector alloc] init];
     startingValues = [NSArray arrayWithObjects:[NSNumber numberWithDouble:0.0],[NSNumber numberWithDouble:0.0], [NSNumber numberWithDouble:0.0], nil];
     myVec = [[Vector alloc] initWithF:startingValues];
@@ -48,32 +55,31 @@
          
          {
              dispatch_async(dispatch_get_main_queue(), ^{
+                 
                  myVec = [[Vector alloc] initWithF:[NSArray arrayWithObjects:[NSNumber numberWithDouble:accelerometerData.acceleration.x],[NSNumber numberWithDouble:accelerometerData.acceleration.y], [NSNumber numberWithDouble:accelerometerData.acceleration.z], nil]];
                  if ([colDetector isNewForceBigger:biggestVec v:myVec]){
                      biggestVec = myVec;
                  }
+                 NSLog(@"%.2f", [myVec getMagnitud]);
                  
-                 //Do Something with the data
-                 
-                 if ([colDetector colHasOcurred:biggestVec value:12]){
+                 if ([colDetector colHasOcurred:biggestVec value:10]){
                      //                     self.statusL.text = @"Ha Ocurrido un accidente";
-                     
+                     [self ventanaEmergente];
+                     timerAlarm = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(triggerAlarm) userInfo:nil repeats:YES];
                      //Ocurrio un Accidente
-                     
-                     
+//                     self.butLabel.text = @"Alert!";
+                     [sharedData setObject: @"Danger!" forKey:@"status"];
+                     [sharedData synchronize];
                  } else {
+                     [self desapareceVentana];
                      //                     self.statusL.text = @"Todo Esta bien";
-                     
                      //Todo esta bien
-                     
-                     
+//                     self.butLabel.text = @"On Ride";
+                     //Do Something with the data
                      [self restartValue];
                  }
              });
-             
-             
          }];
-        
     }
     
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 60, 320, 40)];
@@ -126,6 +132,60 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+- (void) methodB{
+    
+    NSLog(@"cadena %@", [sharedData valueForKey:@"status"] );
+    if ([[sharedData valueForKey:@"L"]  isEqualToString: @"M"]) {
+        [self restartValue];
+    }
+    [sharedData setObject: @"Ok" forKey:@"status"];
+    [sharedData setValue:@"N" forKey:@"L"];
+}
+
+- (void) ventanaEmergente {
+    [self.MasterView bringSubviewToFront:self.alertViewR];
+    [UIView animateWithDuration:0.6 animations:^{
+        [self estadoFinal];
+    }];
+    
+}
+
+- (void) triggerAlarm{
+    counter = counter - 1;
+    self.counterLabel.text = [NSString stringWithFormat:@"%.20d", counter];
+    if (counter <= 0) {
+        //triggerAlarm
+    }
+}
+
+- (void) desapareceVentana {
+    [self.MasterView sendSubviewToBack:self.alertViewR];
+    [UIView animateWithDuration:0.6 animations:^{
+        [self estadoFinal];
+    }];
+    
+}
+
+- (void) estadoFinal {
+    self.alertViewR.transform = CGAffineTransformIdentity;
+    self.alertViewR.alpha = 1;
+    
+}
+
+- (void) estadoInicial{
+    self.alertViewR.transform = CGAffineTransformMakeScale(30, 30);
+    self.alertViewR.alpha = 0;
+    
+}
+
+- (IBAction)popUpButton:(id)sender {
+    [self restartValue];
+    [sharedData setObject: @"OK" forKey:@"status"];
+    [sharedData synchronize];
+    //Cancelar Alarma!!!
+    
+}
 
 - (IBAction)endRideButtonTapped:(UIButton *)sender {
     

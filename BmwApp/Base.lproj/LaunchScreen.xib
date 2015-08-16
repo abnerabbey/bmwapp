@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper_1600x1200_planet_power_02.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Gu4-Jy-ttp">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone6Resolution_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gu4-Jy-ttp">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
             </subviews>
@@ -27,6 +27,6 @@
         </view>
     </objects>
     <resources>
-        <image name="wallpaper_1600x1200_planet_power_02.jpg" width="1600" height="1200"/>
+        <image name="iPhone6Resolution_2.png" width="474" height="849"/>
     </resources>
 </document>
