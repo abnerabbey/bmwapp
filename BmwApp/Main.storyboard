@@ -352,11 +352,11 @@
             </objects>
             <point key="canvasLocation" x="-264" y="71"/>
         </scene>
-        <!--Item-->
+        <!--Ride-->
         <scene sceneID="lNr-vx-lXc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PwL-XY-BDy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8F5-oV-F4a"/>
+                    <tabBarItem key="tabBarItem" title="Ride" id="8F5-oV-F4a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QT9-Gq-4Id">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -486,11 +486,11 @@
             </objects>
             <point key="canvasLocation" x="-985" y="45"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="Cfy-aF-kw1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bzr-so-ed0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9dL-QD-DTo"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="9dL-QD-DTo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VQ1-xe-0Ve">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

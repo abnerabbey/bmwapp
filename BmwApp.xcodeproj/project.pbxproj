@@ -22,6 +22,7 @@
 		0725A25F1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A25A1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg */; };
 		0725A2621B8046BE0002B7A0 /* LocationSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2611B8046BE0002B7A0 /* LocationSingleton.m */; };
 		07CA2C411B80E39100C8625B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA2C401B80E39100C8625B /* ProfileViewController.m */; };
+		07CA2C431B80F49A00C8625B /* joseluis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07CA2C421B80F49A00C8625B /* joseluis.jpg */; };
 		A01C7BE01B809535008CEB90 /* AddUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01C7BDF1B809535008CEB90 /* AddUserInfoViewController.m */; };
 		A01C7BE21B809966008CEB90 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01C7BE11B809966008CEB90 /* AddressBook.framework */; };
 		A01C7BE41B80996C008CEB90 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01C7BE31B80996C008CEB90 /* AddressBookUI.framework */; };
@@ -125,6 +126,7 @@
 		0725A2611B8046BE0002B7A0 /* LocationSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationSingleton.m; path = ../LocationSingleton.m; sourceTree = "<group>"; };
 		07CA2C3F1B80E39100C8625B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
 		07CA2C401B80E39100C8625B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
+		07CA2C421B80F49A00C8625B /* joseluis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = joseluis.jpg; sourceTree = "<group>"; };
 		49FA5A96BFDF7BC3EAC57965 /* Pods-BmwApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.release.xcconfig"; sourceTree = "<group>"; };
 		A01C7BDE1B809535008CEB90 /* AddUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserInfoViewController.h; sourceTree = "<group>"; };
 		A01C7BDF1B809535008CEB90 /* AddUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserInfoViewController.m; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		0725A22A1B7FCAA70002B7A0 /* BmwApp */ = {
 			isa = PBXGroup;
 			children = (
+				07CA2C421B80F49A00C8625B /* joseluis.jpg */,
 				07CA2C3F1B80E39100C8625B /* ProfileViewController.h */,
 				07CA2C401B80E39100C8625B /* ProfileViewController.m */,
 				E06FC1491B80C4EC00563579 /* BmwApp.entitlements */,
@@ -549,6 +552,7 @@
 				0725A25F1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg in Resources */,
 				0725A25D1B8039C20002B7A0 /* BMW-Z4-2013-Facelift-E89-LCI-Wallpaper-1920x1200-06.jpg in Resources */,
 				A02CF4201B80BC98009AD983 /* Main.storyboard in Resources */,
+				07CA2C431B80F49A00C8625B /* joseluis.jpg in Resources */,
 				0725A25C1B8039C20002B7A0 /* BMW-K1600-GT-Wallpaper-04.jpg in Resources */,
 				0725A25B1B8039C20002B7A0 /* BMW motorrad maze.jpg in Resources */,
 			);

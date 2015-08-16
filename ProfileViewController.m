@@ -15,7 +15,7 @@
     UIImageView *profilePhoto;
     UILabel *labelProfile;
     
-    PFObject *myObject;
+    NSMutableArray *stats;
 }
 
 @end
@@ -30,12 +30,8 @@
     //header view
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, 200.0)];
     profilePhoto = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 50, headerView.frame.size.height/2 - 50, 100.0, 100.0)];
+    profilePhoto.image = [UIImage imageNamed:@"joseluis.jpg"];
     [headerView addSubview:profilePhoto];
-    
-    labelProfile = [[UILabel alloc] initWithFrame:CGRectMake(profilePhoto.frame.origin.x, profilePhoto.frame.origin.y + 120, 100.0, 100.0)];
-    labelProfile.text = @"John Appleseed";
-    labelProfile.font = [UIFont systemFontOfSize:12.0];
-    [headerView addSubview:labelProfile];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -48,7 +44,7 @@
 #pragma mark TableView Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return profileArray.count;
+    return stats.count;
 }
 
 /*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -77,10 +73,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if(!cell)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    NSArray *stats = [NSArray arrayWithObjects:[myObject objectForKey:@"placas"], @"puntuación obtenida: 4/5", nil];
-    cell.textLabel.text = [stats objectAtIndex:indexPath.row];
-    NSArray *numbers = [myObject objectForKey:@"telefonos"];
-    cell.textLabel.text = [numbers objectAtIndex:indexPath.row];
+        cell.textLabel.text = [stats objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -90,8 +83,14 @@
     [query whereKey:@"username" equalTo:[PFUser currentUser].username];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         PFObject *object = [objects objectAtIndex:0];
-        myObject = [objects objectAtIndex:0];
-        labelProfile.text = [object objectForKey:@"name"];
+        stats = [[NSMutableArray alloc] init];
+        [stats addObject:[object objectForKey:@"name"]];
+        [stats addObject:[object objectForKey:@"placas"]];
+        NSArray *tels = [object objectForKey:@"telefonos"];
+        for (int i = 0; i < tels.count; i++) {
+            [stats addObject:[tels objectAtIndex:i]];
+        }
+        [stats addObject:@"Your ranking: 4/5"];
         [self.tableView reloadData];
     }];
 }
