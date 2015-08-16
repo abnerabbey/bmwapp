@@ -9,9 +9,12 @@
 #import "RidingViewController.h"
 #import <CoreMotion/CoreMotion.h>
 #import "BMwApp-Swift.h"
+#import "LocationSingleton.h"
+#import <Parse/Parse.h>
 
-@interface RidingViewController ()
-
+@interface RidingViewController ()<MKMapViewDelegate>
+@property (nonatomic, strong) LocationSingleton *locationManager;
+@property (nonatomic, strong) UILabel *label;
 @end
 
 @implementation RidingViewController
@@ -26,6 +29,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.ridingMapView.showsUserLocation = YES;
+    self.locationManager = [LocationSingleton sharedInstace];
+    self.ridingMapView.userTrackingMode = MKUserTrackingModeFollow;
+    [self.locationManager startNewTrip];
+    self.ridingMapView.delegate = self;
     // Do any additional setup after loading the view.
     colDetector = [[ColisionDetector alloc] init];
     startingValues = [NSArray arrayWithObjects:[NSNumber numberWithDouble:0.0],[NSNumber numberWithDouble:0.0], [NSNumber numberWithDouble:0.0], nil];
@@ -66,7 +75,35 @@
          }];
         
     }
+    
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 60, 320, 40)];
+    self.label.text = @"0";
+    [self.label setTextColor:[UIColor blackColor]];
+    [self.view addSubview:self.label];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationUpdated) name:@"locationDistanceUpdated" object:nil];
+
 }
+
+-(void)locationUpdated{
+    
+    
+    self.label.text = [NSString stringWithFormat:@"Distance %@", self.locationManager.currentDistance];
+    
+}
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
+
+    [self.ridingMapView setRegion:MKCoordinateRegionMakeWithDistance(self.locationManager.locationManager.location.coordinate, 20, 20)];
+    
+    MKMapCamera *newCamera = [[self.ridingMapView camera] copy];
+    [newCamera setPitch:70.0]; // or newCamera.heading + 90.0 % 360.0
+    [self.ridingMapView setCamera:newCamera animated:NO];
+    
+    NSLog(@"aqui");
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -91,7 +128,26 @@
  */
 
 - (IBAction)endRideButtonTapped:(UIButton *)sender {
+    
+    
     [self restartValue];
+    PFUser *user = [PFUser currentUser];
+    
+    int maxDistance = [user[@"points"] intValue] + self.locationManager.currentDistance.intValue;
+    user[@"points"] = [NSNumber numberWithInt:maxDistance];
+    [user saveInBackground];
+    
+    [self.locationManager stopTrip];
     [self dismissViewControllerAnimated:false completion:nil];
+
+    
 }
+
+-(void)dealloc{
+
+    self.locationManager = nil;
+    self.ridingMapView.delegate = nil;
+    
+}
+
 @end

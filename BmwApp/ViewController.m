@@ -38,6 +38,11 @@
             NSLog(@"Uh oh. The user cancelled the Facebook login.");
         } else {
             
+            if(user.isNew){
+                user[@"points"] = @0;
+            
+            }
+            
             [self performSegueWithIdentifier:@"logedIn" sender:nil];
 
             
@@ -55,6 +60,7 @@
                  else {
                      NSLog(@"fecthed user: %@", [result valueForKey:@"name"]);
                      user[@"name"]= [result valueForKey:@"name"];
+                     
                      [user saveEventually];
                  }
              }];

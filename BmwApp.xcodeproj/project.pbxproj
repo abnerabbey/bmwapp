@@ -48,6 +48,8 @@
 		A02CF41C1B80B4CD009AD983 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A02CF41B1B80B4CD009AD983 /* libz.dylib */; };
 		A02CF41E1B80B4D8009AD983 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A02CF41D1B80B4D8009AD983 /* libsqlite3.dylib */; };
 		A02CF4201B80BC98009AD983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A02CF41F1B80BC98009AD983 /* Main.storyboard */; };
+		A02CF4231B80C317009AD983 /* RidersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A02CF4221B80C317009AD983 /* RidersManager.m */; };
+		A02CF4251B80C4E1009AD983 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02CF4241B80C4E1009AD983 /* MultipeerConnectivity.framework */; };
 		A907D8A21B7FFC0500DF461D /* RidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A11B7FFC0500DF461D /* RidingViewController.m */; };
 		A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A41B800F4000DF461D /* ContactsViewController.m */; };
 		E01EFCF11B8052A000000ADF /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01EFCF01B8052A000000ADF /* Vector.swift */; };
@@ -121,6 +123,9 @@
 		A02CF41B1B80B4CD009AD983 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A02CF41D1B80B4D8009AD983 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A02CF41F1B80BC98009AD983 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A02CF4211B80C317009AD983 /* RidersManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RidersManager.h; path = ../RidersManager.h; sourceTree = "<group>"; };
+		A02CF4221B80C317009AD983 /* RidersManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RidersManager.m; path = ../RidersManager.m; sourceTree = "<group>"; };
+		A02CF4241B80C4E1009AD983 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		A907D8A01B7FFC0500DF461D /* RidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RidingViewController.h; sourceTree = "<group>"; };
 		A907D8A11B7FFC0500DF461D /* RidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RidingViewController.m; sourceTree = "<group>"; };
 		A907D8A31B800F4000DF461D /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
@@ -136,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A02CF4251B80C4E1009AD983 /* MultipeerConnectivity.framework in Frameworks */,
 				A02CF41E1B80B4D8009AD983 /* libsqlite3.dylib in Frameworks */,
 				A02CF41C1B80B4CD009AD983 /* libz.dylib in Frameworks */,
 				A02CF41A1B80B4C5009AD983 /* SystemConfiguration.framework in Frameworks */,
@@ -193,6 +199,8 @@
 		0725A22A1B7FCAA70002B7A0 /* BmwApp */ = {
 			isa = PBXGroup;
 			children = (
+				A02CF4211B80C317009AD983 /* RidersManager.h */,
+				A02CF4221B80C317009AD983 /* RidersManager.m */,
 				0725A2601B8046BE0002B7A0 /* LocationSingleton.h */,
 				0725A2611B8046BE0002B7A0 /* LocationSingleton.m */,
 				0725A2561B8039C20002B7A0 /* BMW motorrad maze.jpg */,
@@ -205,10 +213,10 @@
 				0725A2321B7FCAA70002B7A0 /* ViewController.h */,
 				0725A2331B7FCAA70002B7A0 /* ViewController.m */,
 				A907D8A31B800F4000DF461D /* ContactsViewController.h */,
+				A907D8A41B800F4000DF461D /* ContactsViewController.m */,
 				E01EFCF21B8052AA00000ADF /* ColisionDetector.swift */,
 				E01EFCF01B8052A000000ADF /* Vector.swift */,
 				A02CF41F1B80BC98009AD983 /* Main.storyboard */,
-				A907D8A41B800F4000DF461D /* ContactsViewController.m */,
 				0725A2511B7FEA320002B7A0 /* MainViewController.h */,
 				0725A2521B7FEA320002B7A0 /* MainViewController.m */,
 				A01C7BDE1B809535008CEB90 /* AddUserInfoViewController.h */,
@@ -253,6 +261,7 @@
 		14E6BCB63C9B851F49E5C1BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A02CF4241B80C4E1009AD983 /* MultipeerConnectivity.framework */,
 				A01C7C051B80B06B008CEB90 /* FacebookSDKStrings.bundle */,
 				A02CF41D1B80B4D8009AD983 /* libsqlite3.dylib */,
 				A02CF41B1B80B4CD009AD983 /* libz.dylib */,
@@ -412,6 +421,7 @@
 			files = (
 				0725A2341B7FCAA70002B7A0 /* ViewController.m in Sources */,
 				A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */,
+				A02CF4231B80C317009AD983 /* RidersManager.m in Sources */,
 				A01C7BF21B809C02008CEB90 /* ABStandin.m in Sources */,
 				A01C7BE01B809535008CEB90 /* AddUserInfoViewController.m in Sources */,
 				E01EFCF11B8052A000000ADF /* Vector.swift in Sources */,

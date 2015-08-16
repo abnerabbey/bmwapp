@@ -17,7 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    [Parse enableLocalDatastore];
+
     [Parse setApplicationId:@"gEDkRgp5JanBICu7PWXZVGBUS07I9bVvcWvfDIG1" clientKey:@"wQFxF9FHYYelJZQzE1Iuuutf9bKrU7R3Qu0zJfii"];
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     

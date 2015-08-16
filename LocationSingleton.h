@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface LocationSingleton : NSObject
+@interface LocationSingleton : NSObject<CLLocationManagerDelegate>
 
 @property (nonatomic, strong)CLLocationManager *locationManager;
+@property (nonatomic, strong) NSNumber *currentDistance;
 
 +(LocationSingleton *)sharedInstace;
-
-
+-(void)startNewTrip;
+-(void)stopTrip;
 @end
