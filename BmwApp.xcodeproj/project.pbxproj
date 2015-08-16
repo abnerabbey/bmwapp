@@ -25,6 +25,8 @@
 		0725A2641B8046DE0002B7A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0725A2631B8046DE0002B7A0 /* CoreLocation.framework */; };
 		A907D8A21B7FFC0500DF461D /* RidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A11B7FFC0500DF461D /* RidingViewController.m */; };
 		A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A907D8A41B800F4000DF461D /* ContactsViewController.m */; };
+		E01EFCF11B8052A000000ADF /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01EFCF01B8052A000000ADF /* Vector.swift */; };
+		E01EFCF31B8052AA00000ADF /* ColisionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01EFCF21B8052AA00000ADF /* ColisionDetector.swift */; };
 		F36EB6B6287DB1A53D3D9A86 /* libPods-BmwApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB6E218735CB9A999414FB2 /* libPods-BmwApp.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,9 @@
 		A907D8A11B7FFC0500DF461D /* RidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RidingViewController.m; sourceTree = "<group>"; };
 		A907D8A31B800F4000DF461D /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
 		A907D8A41B800F4000DF461D /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		E01EFCEF1B8052A000000ADF /* BmwApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BmwApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		E01EFCF01B8052A000000ADF /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		E01EFCF21B8052AA00000ADF /* ColisionDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColisionDetector.swift; sourceTree = "<group>"; };
 		E2CD28466B14303F75D16D6E /* Pods-BmwApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +134,8 @@
 				0725A2331B7FCAA70002B7A0 /* ViewController.m */,
 				0725A2351B7FCAA70002B7A0 /* Main.storyboard */,
 				A907D8A31B800F4000DF461D /* ContactsViewController.h */,
+				E01EFCF21B8052AA00000ADF /* ColisionDetector.swift */,
+				E01EFCF01B8052A000000ADF /* Vector.swift */,
 				A907D8A41B800F4000DF461D /* ContactsViewController.m */,
 				0725A2511B7FEA320002B7A0 /* MainViewController.h */,
 				0725A2521B7FEA320002B7A0 /* MainViewController.m */,
@@ -137,6 +144,7 @@
 				A907D8A01B7FFC0500DF461D /* RidingViewController.h */,
 				A907D8A11B7FFC0500DF461D /* RidingViewController.m */,
 				0725A22B1B7FCAA70002B7A0 /* Supporting Files */,
+				E01EFCEF1B8052A000000ADF /* BmwApp-Bridging-Header.h */,
 			);
 			path = BmwApp;
 			sourceTree = "<group>";
@@ -328,11 +336,13 @@
 			files = (
 				0725A2341B7FCAA70002B7A0 /* ViewController.m in Sources */,
 				A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */,
+				E01EFCF11B8052A000000ADF /* Vector.swift in Sources */,
 				0725A2311B7FCAA70002B7A0 /* AppDelegate.m in Sources */,
 				0725A22E1B7FCAA70002B7A0 /* main.m in Sources */,
 				0725A2621B8046BE0002B7A0 /* LocationSingleton.m in Sources */,
 				A907D8A21B7FFC0500DF461D /* RidingViewController.m in Sources */,
 				0725A2531B7FEA320002B7A0 /* MainViewController.m in Sources */,
+				E01EFCF31B8052AA00000ADF /* ColisionDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,9 +469,12 @@
 			baseConfigurationReference = E2CD28466B14303F75D16D6E /* Pods-BmwApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BmwApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BmwApp/BmwApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -470,9 +483,11 @@
 			baseConfigurationReference = 49FA5A96BFDF7BC3EAC57965 /* Pods-BmwApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BmwApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BmwApp/BmwApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
