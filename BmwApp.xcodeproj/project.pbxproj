@@ -21,6 +21,7 @@
 		0725A25E1B8039C20002B7A0 /* wallpaper_1600x1200_planet_power_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A2591B8039C20002B7A0 /* wallpaper_1600x1200_planet_power_02.jpg */; };
 		0725A25F1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0725A25A1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg */; };
 		0725A2621B8046BE0002B7A0 /* LocationSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725A2611B8046BE0002B7A0 /* LocationSingleton.m */; };
+		07CA2C411B80E39100C8625B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA2C401B80E39100C8625B /* ProfileViewController.m */; };
 		A01C7BE01B809535008CEB90 /* AddUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01C7BDF1B809535008CEB90 /* AddUserInfoViewController.m */; };
 		A01C7BE21B809966008CEB90 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01C7BE11B809966008CEB90 /* AddressBook.framework */; };
 		A01C7BE41B80996C008CEB90 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01C7BE31B80996C008CEB90 /* AddressBookUI.framework */; };
@@ -122,6 +123,8 @@
 		0725A25A1B8039C20002B7A0 /* wallpaper_gs_legend_1440x900_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallpaper_gs_legend_1440x900_03.jpg; sourceTree = "<group>"; };
 		0725A2601B8046BE0002B7A0 /* LocationSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationSingleton.h; path = ../LocationSingleton.h; sourceTree = "<group>"; };
 		0725A2611B8046BE0002B7A0 /* LocationSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationSingleton.m; path = ../LocationSingleton.m; sourceTree = "<group>"; };
+		07CA2C3F1B80E39100C8625B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
+		07CA2C401B80E39100C8625B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
 		49FA5A96BFDF7BC3EAC57965 /* Pods-BmwApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BmwApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BmwApp/Pods-BmwApp.release.xcconfig"; sourceTree = "<group>"; };
 		A01C7BDE1B809535008CEB90 /* AddUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserInfoViewController.h; sourceTree = "<group>"; };
 		A01C7BDF1B809535008CEB90 /* AddUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserInfoViewController.m; sourceTree = "<group>"; };
@@ -251,6 +254,8 @@
 		0725A22A1B7FCAA70002B7A0 /* BmwApp */ = {
 			isa = PBXGroup;
 			children = (
+				07CA2C3F1B80E39100C8625B /* ProfileViewController.h */,
+				07CA2C401B80E39100C8625B /* ProfileViewController.m */,
 				E06FC1491B80C4EC00563579 /* BmwApp.entitlements */,
 				0725A2601B8046BE0002B7A0 /* LocationSingleton.h */,
 				0725A2611B8046BE0002B7A0 /* LocationSingleton.m */,
@@ -585,6 +590,7 @@
 				A907D8A51B800F4000DF461D /* ContactsViewController.m in Sources */,
 				A01C7BF21B809C02008CEB90 /* ABStandin.m in Sources */,
 				A01C7BE01B809535008CEB90 /* AddUserInfoViewController.m in Sources */,
+				07CA2C411B80E39100C8625B /* ProfileViewController.m in Sources */,
 				E01EFCF11B8052A000000ADF /* Vector.swift in Sources */,
 				0725A2311B7FCAA70002B7A0 /* AppDelegate.m in Sources */,
 				A01C7BEF1B809C02008CEB90 /* ABContact.m in Sources */,
